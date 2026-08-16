@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- BASE:START (managed by Coding Agent — do not edit) -->
+<base href="/saged-ai-live/">
+<!-- BASE:END -->
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:wght@500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+
+
+<!-- SEO Meta Tags -->
+<title>SAGED.AI — Unlocking Growth Through AI | Atlanta AI Consulting</title>
+<meta name="description" content="SAGED.AI helps small and mid-sized organizations harness AI with confidence — strategy, automation, and conversational AI built for how you actually work." />
+<meta property="og:title" content="SAGED.AI — Unlocking Growth Through AI | Atlanta AI Consulting" />
+<meta property="og:description" content="SAGED.AI helps small and mid-sized organizations harness AI with confidence — strategy, automation, and conversational AI built for how you actually work." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="SAGED.AI — Unlocking Growth Through AI | Atlanta AI Consulting" />
+<meta name="twitter:description" content="SAGED.AI helps small and mid-sized organizations harness AI with confidence — strategy, automation, and conversational AI built for how you actually work." />
+<!-- End SEO Meta Tags -->
+<script data-lp-token-hydrate>
+(function(){try{
+  var slug="lp-mrotnjhf-fdkp2-copy-1786235811924";
+  var SITEK="";
+  var SK='lp_access_'+slug;
+  var map={access_token:'lp_pw_',allowlist_access_token:'lp_al_',pin_access_token:'lp_pin_',paywall_access_token:'lp_paid_'};
+  function siteTok(){try{return SITEK?localStorage.getItem(SITEK):null;}catch(e){return null;}}
+  var u=new URL(location.href);var found=null;var changed=false;
+  var PINP=true;
+  if(!PINP){try{localStorage.removeItem('lp_pin_'+slug);if(SITEK)localStorage.removeItem(SITEK);}catch(e){}}
+  Object.keys(map).forEach(function(p){var v=u.searchParams.get(p);if(v){found=v;try{if(PINP||p!=='pin_access_token'){localStorage.setItem(map[p]+slug,v);if(SITEK&&p==='pin_access_token')localStorage.setItem(SITEK,v);}}catch(e){}if(p==='pin_access_token'){try{sessionStorage.setItem('lp_fresh_'+slug,'1');}catch(e){}}u.searchParams.delete(p);changed=true;}});
+  if(found){try{sessionStorage.setItem(SK,found);}catch(e){}}
+  else{try{if(!sessionStorage.getItem(SK)){var t=localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();if(t)sessionStorage.setItem(SK,t);}}catch(e){}}
+  if(changed){try{history.replaceState(null,'',u.toString());}catch(e){}}
+  function getTok(){try{return sessionStorage.getItem(SK)||localStorage.getItem('lp_pw_'+slug)||localStorage.getItem('lp_al_'+slug)||localStorage.getItem('lp_pin_'+slug)||localStorage.getItem('lp_paid_'+slug)||siteTok();}catch(e){return null;}}
+  function needsToken(url,method){if(!url)return false;var s=String(url);var m=(method||'GET').toUpperCase();var isSheetWrite=(m==='POST'||m==='PATCH'||m==='PUT'||m==='DELETE')&&/\/sheet-rows(\/|$|\?)/.test(s);var isSheetRead=/\/sheet-data(\/|$|\?)/.test(s);var isLlm=/\/api\/landing-pages\/public\/[^/]+\/(llm|llm-config)(\/|$|\?)/.test(s);return isSheetWrite||isSheetRead||isLlm;}
+  if(window.fetch){var _f=window.fetch;window.fetch=function(input,init){try{var url=typeof input==='string'?input:(input&&input.url)||'';var method=(init&&init.method)||(input&&input.method)||'GET';if(needsToken(url,method)){var tok=getTok();if(tok){init=init||{};var h=new Headers(init.headers||(typeof input!=='string'?input.headers:undefined)||{});if(!h.has('X-Landing-Page-Token'))h.set('X-Landing-Page-Token',tok);init.headers=h;}}}catch(e){}return _f.call(this,input,init);};}
+  if(window.XMLHttpRequest){var _o=XMLHttpRequest.prototype.open;var _s=XMLHttpRequest.prototype.send;XMLHttpRequest.prototype.open=function(m,u){this.__lpM=m;this.__lpU=u;return _o.apply(this,arguments);};XMLHttpRequest.prototype.send=function(){try{if(needsToken(this.__lpU,this.__lpM)){var tok=getTok();if(tok)this.setRequestHeader('X-Landing-Page-Token',tok);}}catch(e){}return _s.apply(this,arguments);};}
+}catch(e){}})();
+</script>
+
+<script data-field-replace>
+(function(){
+  var params=new URLSearchParams(window.location.search);
+  var fields={};
+  var paramMap={
+    'first_name':'firstName','last_name':'lastName','full_name':'fullName',
+    'email':'email','phone':'phone','company':'company',
+    'city':'city','state':'state','country':'country'
+  };
+  var skipTags={'SCRIPT':1,'STYLE':1,'NOSCRIPT':1,'TEXTAREA':1,'CODE':1,'PRE':1};
+  var hasUrlFields=false;
+  for(var p in paramMap){
+    var v=params.get(p);
+    if(v){fields[paramMap[p]]=v;hasUrlFields=true;}
+  }
+  var contactId=params.get('contact_id');
+  function esc(s){
+    if(!s)return s;
+    var d=document.createElement('div');
+    d.appendChild(document.createTextNode(s));
+    return d.innerHTML;
+  }
+  function doReplace(data){
+    var r={};
+    r['{{full_name}}']=esc(((data.firstName||'')+' '+(data.lastName||'')).trim()||((data.fullName||data.name)||''));
+    r['{{first_name}}']=esc(data.firstName||(data.name?data.name.split(' ')[0]:'')||'');
+    r['{{last_name}}']=esc(data.lastName||(data.name&&data.name.indexOf(' ')>-1?data.name.substring(data.name.indexOf(' ')+1):'')||'');
+    r['{{email}}']=esc(data.email||'');
+    r['{{phone}}']=esc(data.phone||'');
+    r['{{company}}']=esc(data.company||'');
+    r['{{city}}']=esc(data.city||'');
+    r['{{state}}']=esc(data.state||'');
+    r['{{country}}']=esc(data.country||'');
+    r['{{date}}']=new Date().toLocaleDateString();
+    r['{{time}}']=new Date().toLocaleTimeString();
+    r['{{location}}']=[data.city,data.state,data.country].filter(Boolean).join(', ');
+    r['{{tracking_id}}']=esc(data.trackingId||'');
+    r['{{lastClickedProduct}}']=esc(data.lastClickedProduct||'');
+    r['{{lastProductClickDate}}']=esc(data.lastProductClickDate||'');
+    r['{{lastClickedProductPrice}}']=esc(data.lastClickedProductPrice||'');
+    r['{{lastClickedProductURL}}']=esc(data.lastClickedProductURL||'');
+    r['{{productsClickedCount}}']=esc(data.productsClickedCount||'0');
+    r['{{ip_address}}']=esc(data.ipAddress||'');
+    r['{{ip}}']=esc(data.ipAddress||'');
+    if(data.customFields){
+      for(var k in data.customFields){
+        r['{{'+k+'}}']=esc(String(data.customFields[k]||''));
+      }
+    }
+    params.forEach(function(v,k){
+      if(!paramMap[k]&&k!=='contact_id'&&k!=='page_id'&&k.indexOf('utm_')!==0){
+        r['{{'+k+'}}']=esc(v);
+      }
+    });
+    var hasValues=false;
+    for(var key in r){if(r[key]){hasValues=true;break;}}
+    if(!hasValues)return;
+    var walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT,{
+      acceptNode:function(n){
+        var p=n.parentNode;
+        if(p&&skipTags[p.nodeName])return NodeFilter.FILTER_REJECT;
+        return NodeFilter.FILTER_ACCEPT;
+      }
+    });
+    var node;
+    while(node=walker.nextNode()){
+      var txt=node.nodeValue;
+      if(txt&&txt.indexOf('{{')>-1){
+        var changed=txt;
+        for(var ph in r){
+          if(r[ph]&&changed.indexOf(ph)>-1){
+            changed=changed.split(ph).join(r[ph]);
+          }
+        }
+        if(changed!==txt)node.nodeValue=changed;
+      }
+    }
+    var attrs=['value','placeholder','content','alt','title'];
+    attrs.forEach(function(attr){
+      var els=document.querySelectorAll('['+attr+'*="{{"]');
+      for(var i=0;i<els.length;i++){
+        var tag=els[i].tagName;
+        if(skipTags[tag])continue;
+        var val=els[i].getAttribute(attr);
+        if(val){
+          var nv=val;
+          for(var ph in r){
+            if(r[ph]&&nv.indexOf(ph)>-1){
+              nv=nv.split(ph).join(r[ph]);
+            }
+          }
+          if(nv!==val)els[i].setAttribute(attr,nv);
+        }
+      }
+    });
+  }
+  function run(){
+    if(contactId){
+      var xhr=new XMLHttpRequest();
+      xhr.open('GET','https://paymegpt.com/api/landing/context/'+encodeURIComponent(contactId)+'?page_id=6040');
+      xhr.onload=function(){
+        if(xhr.status===200){
+          try{
+            var resp=JSON.parse(xhr.responseText);
+            if(resp.success&&resp.contact){
+              var merged=resp.contact;
+              for(var k in fields){merged[k]=fields[k];}
+              doReplace(merged);
+              return;
+            }
+          }catch(e){}
+        }
+        if(hasUrlFields)doReplace(fields);
+      };
+      xhr.onerror=function(){if(hasUrlFields)doReplace(fields);};
+      xhr.send();
+    }else if(hasUrlFields){
+      doReplace(fields);
+    }
+  }
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',run);}
+  else{run();}
+})();
+</script>
+<script data-payment>
+(function(){
+  var slug='U6nPtgkb';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realProcessPayment=function(a,b,c,d,e){
+    var amountCents,email,productName,productDescription,customerName,quantity;
+    if(a&&typeof a==='object'){
+      amountCents=a.amountCents;email=a.email;productName=a.productName;
+      productDescription=a.productDescription||'';customerName=a.name||'';quantity=a.quantity||1;
+    }else{
+      amountCents=typeof a==='number'?a:0;productName=typeof b==='string'?b:'';
+      productDescription=typeof c==='string'?c:'';email='';customerName='';quantity=1;
+    }
+    if(!email)email=findEmail();
+    if(!customerName)customerName=findName();
+    var phone=findPhone();
+    if(!productName){alert('Product name is required.');return Promise.reject('no_product_name');}
+    if(!amountCents||amountCents<100){alert('Amount must be at least $1.00');return Promise.reject('invalid_amount');}
+    if(!email){alert('Please enter your email address.');return Promise.reject('no_email');}
+    var successBase=window.location.href.split('?')[0];
+    var __pLoc=(document.documentElement.lang||navigator.language||'en');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/payment/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({email:email,name:customerName,phone:phone||'',amountCents:amountCents,productName:productName,productDescription:productDescription,quantity:quantity,locale:__pLoc,successUrl:successBase+'?payment=success&product='+encodeURIComponent(productName)+'&session_id={CHECKOUT_SESSION_ID}',cancelUrl:successBase+'?payment=cancelled'})
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process payment');throw new Error(d.error);}
+    });
+  };
+  Object.defineProperty(window,'__processPayment',{value:__realProcessPayment,writable:false,configurable:false});
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('payment')==='success'){
+      var sidP=urlParams.get('session_id');
+      if(sidP){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidP})}).catch(function(){});}catch(e){}}
+      var pName=urlParams.get('product')||'your item';
+      var overlay=document.createElement('div');overlay.id='payment-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||('Thank you for purchasing '+pName+'.');
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Payment Successful!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-pay-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var pBtn=document.getElementById('lp-pay-success-btn');
+      if(pBtn){pBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>
+<script data-cart>
+(function(){
+  var slug='U6nPtgkb';
+  var apiBase='https://paymegpt.com';
+  var successSubtext='';var successBtnLabel='Continue';var successBtnColor='#16a34a';var successRedirect='';
+  function findCartEmail(){
+    var ids=['email','emailAddress','buyer-email','buyerEmail','user-email','userEmail','checkout-email','customer-email','contact-email'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.includes('@'))return el.value.trim();}
+    var inputs=document.querySelectorAll('input[type="email"],input[name*="email"],input[placeholder*="email"],input[placeholder*="Email"]');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.includes('@'))return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartName(){
+    var ids=['name','fullName','full-name','buyer-name','buyerName','customer-name','userName','user-name'];
+    for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value)return el.value.trim();}
+    var inputs=document.querySelectorAll('input[name*="name"]:not([name*="email"]):not([type="email"]),input[placeholder*="name"]:not([placeholder*="email"]):not([type="email"]),input[placeholder*="Name"]:not([type="email"])');
+    for(var j=0;j<inputs.length;j++){if(inputs[j].value)return inputs[j].value.trim();}
+    return '';
+  }
+  function findCartPhone(){var ids=['phone','phoneNumber','phone-number','tel','telephone','mobile','mobileNumber','cell','contact-phone','buyer-phone'];for(var i=0;i<ids.length;i++){var el=document.getElementById(ids[i]);if(el&&el.value&&el.value.trim())return el.value.trim();}var inputs=document.querySelectorAll('input[type="tel"],input[name*="phone"],input[name*="tel"],input[name*="mobile"],input[placeholder*="phone"],input[placeholder*="Phone"]');for(var j=0;j<inputs.length;j++){if(inputs[j].value&&inputs[j].value.trim())return inputs[j].value.trim();}return '';}
+  var __realCart=function(arg){
+    var items, email='', customerName='', successUrl, cancelUrl, currency;
+    if(Array.isArray(arg)){items=arg;}
+    else if(arg&&typeof arg==='object'){
+      items=arg.items;email=arg.email||'';customerName=arg.name||arg.customerName||'';
+      successUrl=arg.successUrl;cancelUrl=arg.cancelUrl;currency=arg.currency;
+    }
+    if(!Array.isArray(items)||items.length===0){alert('No items in cart.');return Promise.reject('no_items');}
+    var cleanItems=[];var totalCents=0;
+    for(var i=0;i<items.length;i++){
+      var it=items[i];if(!it||typeof it!=='object'){alert('Invalid item at position '+i);return Promise.reject('bad_item');}
+      var nm=typeof it.name==='string'?it.name.trim():'';
+      if(!nm){alert('Item '+(i+1)+' is missing a name.');return Promise.reject('no_name');}
+      var amt=typeof it.amountCents==='number'?it.amountCents:(typeof it.amount==='number'?Math.round(it.amount*100):NaN);
+      if(!isFinite(amt)||amt<1){alert('Item "'+nm+'" needs a valid amount in cents.');return Promise.reject('bad_amount');}
+      var qty=(typeof it.quantity==='number'&&it.quantity>0)?Math.floor(it.quantity):1;
+      cleanItems.push({name:nm,description:it.description||'',amountCents:amt,quantity:qty});
+      totalCents+=amt*qty;
+    }
+    if(totalCents<50){alert('Cart total must be at least $0.50');return Promise.reject('total_too_low');}
+    if(!email)email=findCartEmail();
+    if(!customerName)customerName=findCartName();
+    var cartPhone=findCartPhone();
+    if(!email){var p=window.prompt('Enter your email for the receipt:','');if(p&&p.indexOf('@')>-1){email=p.trim();}else{alert('An email address is required to complete checkout.');return Promise.reject('no_email');}}
+    var successBase=window.location.href.split('?')[0];
+    var body={email:email,name:customerName,items:cleanItems,locale:(document.documentElement.lang||navigator.language||'en')};
+    if(currency)body.currency=currency;
+    if(cartPhone)body.phone=cartPhone;
+    body.successUrl=successUrl||(successBase+'?cart=success&email='+encodeURIComponent(email)+'&session_id={CHECKOUT_SESSION_ID}');
+    body.cancelUrl=cancelUrl||(successBase+'?cart=cancelled');
+    return fetch(apiBase+'/api/landing-pages/public/'+slug+'/cart/checkout',{
+      method:'POST',headers:{'Content-Type':'application/json'},
+      body:JSON.stringify(body)
+    }).then(function(r){return r.json();}).then(function(d){
+      if(d.checkoutUrl){window.location.href=d.checkoutUrl;}
+      else{alert(d.error||'Failed to process checkout');throw new Error(d.error);}
+    });
+  };
+  try{Object.defineProperty(window,'__processCart',{value:__realCart,writable:false,configurable:false});}catch(e){window.__processCart=__realCart;}
+  document.addEventListener('DOMContentLoaded',function(){
+    var urlParams=new URLSearchParams(window.location.search);
+    if(urlParams.get('cart')==='success'){
+      var sidC=urlParams.get('session_id');
+      if(sidC){try{fetch(apiBase+'/api/landing-pages/public/'+slug+'/checkout/confirm',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({sessionId:sidC})}).catch(function(){});}catch(e){}}
+      if(document.getElementById('payment-success-overlay')||document.getElementById('donation-success-overlay')||document.getElementById('cart-success-overlay'))return;
+      var overlay=document.createElement('div');overlay.id='cart-success-overlay';
+      overlay.style.cssText='position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:999999;font-family:system-ui,-apple-system,sans-serif;';
+      function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+      var subTxt=successSubtext||'Thank you for your order.';
+      overlay.innerHTML='<div style="background:white;border-radius:16px;padding:40px;max-width:420px;width:90%;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.15);"><div style="width:64px;height:64px;border-radius:50%;background:#dcfce7;margin:0 auto 20px;display:flex;align-items:center;justify-content:center;"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></div><h2 style="margin:0 0 12px;font-size:24px;font-weight:700;color:#111827;">Order Confirmed!</h2><p style="margin:0 0 24px;color:#6b7280;font-size:16px;">'+esc(subTxt)+'</p><button id="lp-cart-success-btn" style="padding:12px 32px;font-size:16px;font-weight:600;background:'+successBtnColor+';color:white;border:none;border-radius:8px;cursor:pointer;">'+esc(successBtnLabel)+'</button></div>';
+      document.body.appendChild(overlay);
+      var cBtn=document.getElementById('lp-cart-success-btn');
+      if(cBtn){cBtn.addEventListener('click',function(){if(successRedirect){window.location.href=successRedirect;}else{overlay.remove();window.history.replaceState({},'',window.location.pathname);}});}
+    }
+  });
+})();
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="nav" id="nav" data-section="nav">
+  <div class="nav-inner">
+    <a class="nav-logo" href="#top">
+      <img class="mark-dark" alt="" src="https://paymegpt.com/objects/quick-uploads/83/ca7f64b5d5692704.png">
+      <span>SAGED.AI</span>
+    </a>
+    <div class="nav-links">
+      <a href="#method">The SAGED.AI Method</a>
+      <a href="#why">Why SAGED.AI</a>
+      <a href="#services">Services</a>
+      <a href="#process">How It Works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#pricing">Pricing</a>
+      <a class="btn btn-primary nav-cta" href="https://paymegpt.com/p/8qNX2qhXY">Contact Us</a>
+    </div>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle light or dark mode" title="Toggle theme">
+        <svg class="sun" viewBox="0 0 24 24"><path d="M12 17a5 5 0 100-10 5 5 0 000 10zm0 2a1 1 0 011 1v2a1 1 0 01-2 0v-2a1 1 0 011-1zm0-18a1 1 0 011 1v2a1 1 0 01-2 0V2a1 1 0 011-1zm11 11a1 1 0 01-1 1h-2a1 1 0 010-2h2a1 1 0 011 1zM4 12a1 1 0 01-1 1H1a1 1 0 010-2h2a1 1 0 011 1zm15.07-7.07a1 1 0 010 1.41l-1.42 1.42a1 1 0 01-1.41-1.41l1.41-1.42a1 1 0 011.42 0zM7.76 16.24a1 1 0 010 1.41l-1.41 1.42a1 1 0 01-1.42-1.42l1.42-1.41a1 1 0 011.41 0zm11.31 2.83a1 1 0 01-1.42 0l-1.41-1.42a1 1 0 011.41-1.41l1.42 1.41a1 1 0 010 1.42zM6.35 4.93a1 1 0 010 1.41L4.93 7.76a1 1 0 01-1.41-1.42l1.41-1.41a1 1 0 011.42 0z"/></svg>
+        <svg class="moon" viewBox="0 0 24 24"><path d="M21.53 15.93a1 1 0 00-1.1-.27 7.5 7.5 0 01-9.9-9.9 1 1 0 00-1.32-1.32A9.5 9.5 0 1021.8 17.03a1 1 0 00-.27-1.1z"/></svg>
+      </button>
+      <button class="nav-burger" aria-label="Menu" onclick="document.getElementById('nav').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="nav-mobile">
+    <a href="#method">The SAGED.AI Method</a>
+    <a href="#why">Why SAGED.AI</a>
+    <a href="#services">Services</a>
+    <a href="#process">How It Works</a>
+    <a href="#faq">FAQ</a>
+    <a href="#pricing">Pricing</a>
+    <a href="https://paymegpt.com/p/8qNX2qhXY">Contact Us</a>
+  </div>
+</nav>
+
+<header class="hero" id="top" data-section="hero">
+  <div class="hero-dots"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div class="badge"><span class="dot"></span> Atlanta-based · Serving growing businesses nationwide</div>
+      <h1>AI systems built around <em>your business</em>.</h1>
+      <p class="lead">SAGED.AI turns AI from a headline into working infrastructure — AI agents that answer customers around the clock, automations that clear the busywork, and reporting that finally tells you something useful.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-teal" href="#book" data-book="1">Book a Free AI Audit</a>
+        <a class="btn btn-out" href="#method">The SAGED.AI Method</a>
+      </div>
+      <div class="hero-meta">30-minute call · <b>No cost, no pitch</b> · You leave with a plan either way</div>
+    </div>
+    <div class="hero-media reveal">
+      <div class="hero-video">
+        <video id="denisePreview" muted playsinline poster="https://paymegpt.com/objects/quick-uploads/83/cd32a577b4017c98.jpg" style="display:none">
+          <source src="https://paymegpt.com/objects/quick-uploads/83/c7f133619e4ca0e7.mp4" type="video/mp4">
+        </video>
+        <div class="video-fallback" id="videoFallback">
+          <div class="play-badge"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div>
+        </div>
+      </div>
+      <div class="hero-caption">
+        <b>Denise Whitfield</b>
+        <span>President &amp; CEO</span>
+        <span style="display:block;margin-top:3px;color:var(--muted-2)">AI Strategies</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section style="background:var(--surface);padding:40px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)" data-section="logos">
+  <div class="wrap">
+    <div style="overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent);mask-image:linear-gradient(90deg,transparent,#000 10%,#000 90%,transparent)">
+      <div id="marqueeTrack" style="display:flex;gap:40px;width:max-content;align-items:center;animation:marq 34s linear infinite">
+        <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto"><img src="https://paymegpt.com/objects/quick-uploads/83/5a0c136cdf3e0229.png" alt="PayMeGPT" style="height:32px;width:auto"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.03em;color:var(--muted);white-space:nowrap">PayMeGPT</span></div>
+        <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto"><img src="https://paymegpt.com/objects/quick-uploads/83/7d07082d975585f3.png" alt="Claude" style="height:32px;width:auto"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.03em;color:var(--muted);white-space:nowrap">Claude</span></div>
+        <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto"><img src="https://paymegpt.com/objects/quick-uploads/83/c13df034c3a525fc.png" alt="Make" style="height:32px;width:auto"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.03em;color:var(--muted);white-space:nowrap">Make</span></div>
+        <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto"><img src="https://dwhitatl.github.io/saged-ai-site/assets/marquee-04.png" alt="Google Workspace" style="height:32px;width:auto"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.03em;color:var(--muted);white-space:nowrap">Google Workspace</span></div>
+        <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Microsoft 365" style="height:32px;width:32px;flex:0 0 auto"><rect x="1" y="1" width="10" height="10" fill="#F25022"/><rect x="13" y="1" width="10" height="10" fill="#7FBA00"/><rect x="1" y="13" width="10" height="10" fill="#00A4EF"/><rect x="13" y="13" width="10" height="10" fill="#FFB900"/></svg><span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.03em;color:var(--muted);white-space:nowrap">Microsoft 365</span></div>
+        <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="SharePoint" style="height:32px;width:32px;flex:0 0 auto"><circle cx="8" cy="9" r="5" fill="#036C70"/><circle cx="16" cy="7" r="4" fill="#1A9BA1"/><circle cx="13" cy="16" r="6" fill="#37C6D0"/></svg><span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.03em;color:var(--muted);white-space:nowrap">SharePoint</span></div>
+        <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Zapier" style="height:32px;width:32px;flex:0 0 auto"><path fill="#FF4A00" d="M13 2 L4 14h6l-1 8 10-14h-6z"/></svg><span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.03em;color:var(--muted);white-space:nowrap">Zapier</span></div>
+        <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Stripe" style="height:32px;width:32px;flex:0 0 auto"><path fill="#635BFF" d="M13.976 9.15c-2.172-.806-3.356-1.426-3.356-2.409 0-.831.683-1.305 1.901-1.305 2.227 0 4.515.858 6.09 1.631l.89-5.494C18.252.975 15.697 0 12.165 0 9.667 0 7.589.654 6.104 1.872 4.56 3.147 3.757 4.992 3.757 7.218c0 4.039 2.467 5.76 6.476 7.219 2.585.92 3.445 1.574 3.445 2.583 0 .98-.84 1.545-2.354 1.545-1.875 0-4.965-.921-6.99-2.109l-.9 5.555C5.175 22.99 8.385 24 11.714 24c2.641 0 4.843-.624 6.328-1.813 1.664-1.305 2.525-3.236 2.525-5.732 0-4.128-2.524-5.851-6.594-7.305h.003z"/></svg><span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.03em;color:var(--muted);white-space:nowrap">Stripe</span></div>
+        <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-label="Atlas Cloud" style="height:32px;width:32px;flex:0 0 auto"><path fill="var(--teal)" d="M6.7 19c-2.6 0-4.7-2.1-4.7-4.7 0-2.3 1.65-4.2 3.85-4.6C6.4 7.1 8.9 5 11.9 5c3.05 0 5.6 2.2 6.1 5.1 2.1.35 3.7 2.15 3.7 4.35 0 2.5-2.05 4.55-4.55 4.55H6.7z"/></svg><span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.03em;color:var(--muted);white-space:nowrap">Atlas Cloud</span></div>
+        <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto"><img src="https://dwhitatl.github.io/saged-ai-site/assets/marquee-02.png" alt="Slack" style="height:32px;width:auto"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.03em;color:var(--muted);white-space:nowrap">Slack</span></div>
+        <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto"><img src="https://dwhitatl.github.io/saged-ai-site/assets/marquee-07.png" alt="Shopify" style="height:32px;width:auto"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.03em;color:var(--muted);white-space:nowrap">Shopify</span></div>
+        <div style="display:flex;align-items:center;gap:10px;flex:0 0 auto"><img src="https://dwhitatl.github.io/saged-ai-site/assets/marquee-03.png" alt="Notion" style="height:32px;width:auto"><span style="font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:.03em;color:var(--muted);white-space:nowrap">Notion</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section saged center" id="method" data-section="saged-method">
+  <div class="wrap">
+    <div class="eyebrow">The SAGED.AI Method</div>
+    <h2 class="h2 reveal">Our name is our method</h2>
+    <p class="sub reveal">Five moves that build on each other — and a last one that explains why the first four matter.</p>
+    <div class="saged-word">Streamline · Automate · Grow · Elevate · Dominate</div>
+    <div class="saged-grid">
+
+      <div class="flip reveal" tabindex="0">
+        <div class="flip-inner">
+          <div class="face face-front">
+            <div class="f-icon"><img alt="" src="data:image/png;base64,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"></div>
+            <div class="f-num">01</div><div class="f-letter">S</div>
+            <div class="f-title">Streamline</div>
+            <div class="f-rule"></div>
+            <div class="f-sub">Flow with purpose.</div>
+            <div class="f-hint">Flip →</div>
+          </div>
+          <div class="face face-back">
+            <h5>Fewer steps, fewer failures</h5>
+            <p>We start by mapping how work actually moves through your business — call to invoice, lead to sale — and find where things get dropped, duplicated, or stuck waiting on someone.</p>
+            <p>A clean process is worth more than any tool bolted on top of it.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip reveal" tabindex="0">
+        <div class="flip-inner">
+          <div class="face face-front">
+            <div class="f-icon"><img alt="" src="data:image/png;base64,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"></div>
+            <div class="f-num">02</div><div class="f-letter">A</div>
+            <div class="f-title">Automate</div>
+            <div class="f-rule"></div>
+            <div class="f-sub">Smarter systems.</div>
+            <div class="f-hint">Flip →</div>
+          </div>
+          <div class="face face-back">
+            <h5>Work that runs itself</h5>
+            <p>Follow-ups, data entry, scheduling, invoicing, first response — handled without anyone touching them. Operating costs fall by as much as 40%.</p>
+            <p>Your team stops doing what software should.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip reveal" tabindex="0">
+        <div class="flip-inner">
+          <div class="face face-front">
+            <div class="f-icon"><img alt="" src="data:image/png;base64,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"></div>
+            <div class="f-num">03</div><div class="f-letter">G</div>
+            <div class="f-title">Grow</div>
+            <div class="f-rule"></div>
+            <div class="f-sub">Scalable impact.</div>
+            <div class="f-hint">Flip →</div>
+          </div>
+          <div class="face face-back">
+            <h5>Serve more without hiring more</h5>
+            <p>The capacity you freed becomes revenue. Leads answered in seconds. Outreach personalized at a scale no team could hand-write.</p>
+            <p>Growth stops being tied to headcount.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip reveal" tabindex="0">
+        <div class="flip-inner">
+          <div class="face face-front">
+            <div class="f-icon"><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABUCAMAAAAmq5C0AAAAwFBMVEXv6N7i2arnzaDqsar89uK2sG7Jp2v07d3q4tDPs4W8nWPiqGp/AACYbDN/fwDe0LOofVW1o462ttqq/6qZzMz/fz/AoGH/v//U1H8AAADGpW3BnWT9/v28llfRt4vBmlp/f3+9m2Lo28X/AADbyKjk1Ljv5dH//wD/f3/36MvYwZi+vb2qqqrTs3n//3/r17EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACjL39NAAAAMHRSTlMVDucL5QnXnlfk7wkCJgKmIyQHAwUEvwQGAPz+Bv72/gL98wH39PQBAtL2BQP8AtZw5Wv9AAAEdUlEQVR42tWZaVejOgyGvQEhXWbm7jKyCQ7QAFn+/7+7MpC2pCShKT3T6uRLwDzIli29NgymWgk4rSGbSmQOnmZFIpSfgBSwnhX5BGU+O9LZ2ZHF3Mg15Hry3PidyGR2ZD03EsCaT0A238DL2CwmLvLJSJ0q2M+NdDMjcZkWsJnXyyzNP4KUzZussRhDNvIdXrJhndmDStIaVsNG28leSlgsTtrvoUxSe4JsgC9ATkKiXPyI2ODOBpwx8RApIVDR2PNjHW9AOjVgrkAYowfIOwgqxThOHEsOD4cBcwW5STV7QSKHn6Li0EwOj4SHuMKXmx3yxUvy7U4cJL17esQ5/BCCPQd+BbVJk+i4fOhlUSh+gXzPVEfJDrsY4X7fIy15qXqvOGAl7K9xH8+vHglM7JYRdkKoRaZl51azJmLIzxHPL0jqdaytYhveIjUhXYvkj9SBf/iZXl9c4+RGaHSFwbZFph0S2SMXuo7O+ngxbQQgiXlgd5seWcAWAyDirhqdkBMyEYfKeibHI5JJpkJNly5pzUtI5KzSJhP/BgHoJEkFBFjttBYXiZfzJcW70CYRGLAWKf86aL2zF0JzPQW3zCSxG+9lIoD+6FBeUdhXsvoesPbMUmdJkuda67q69sy1QkFrz5Jr3skkaeGIeAsSceNtRbYFHidZlpCXWaKJeL/3l1f+/ji8ReKTtzXZ6AuUNb2T2o1C/JMtAs95iRCpsnRFkdfW0qTRfiC7fmsfcWvrPC8KV6rFWKQYDQ0jgCc8I5ZLrXtSarx1SLKMRrW7RJZqs2xfUefCv6EsVYtzRe5JxMmy7Ng20b0Rhf6arGcer6ZHC5Nl24qe7eCicK87zlTfWTsEejezDthB6VLPj22eC+cr1SvM02hQ/HA6l+eEj2Od9Ej62db8WDqqjzgSqKdBeLCbN2T4qhhiTT33k8j7OMhp1KydTyucNNX3fEu2p5IlfNf9SC4Jafm93G9b46ubVg8tchFSGKxHWk0xqBngRxYkSix9idDKR9U5P8MK/FDaYFDtiCgA/Eg68Pl35+hFNyMpMYaa8joEjPqdOqq2sU7tlVx06SZJM+uJ2GV18pIFfwjtM2ZwG5LyWkEhrljQ1h6PlKs7JnzYobkF6SvPTocKA+wrpJcGQcAOOozZTUVXQlT7yvU3HqVBqzb4hmpcKtglUXG2ivNwd2D3rdLyAsYknSbCR1SW7rxbwHitQdptHTzLLHNUbg1gtBTqrDo4KwZZKEhhcnhRbtlRX+La343ep9xopIQnIrzoS5M8q2DSwFyEDySuJyMbYAehTlTwQKt7pniYroL/5EzF0ev0sHkj//+Dpjr8HGWy0YGMygBeJ4cNFMYM9z20WFUVwLQdhaR9jxzuz9p9z8lWivqu1KJpJu/O+ImOKd8g6VEeLaCZOomCU2mkMpPfvoekiI/tdM3bna7E7Yf242buLT7Txs1+tmFmPy75hEOdb3JAln39w8bvcnAr7MzI9hB8buQnHNW7/Ot/o0Aoi6//vYcaTv7Q9T9JlJ7SI3EK+AAAAABJRU5ErkJggg=="></div>
+            <div class="f-num">04</div><div class="f-letter">E</div>
+            <div class="f-title">Elevate</div>
+            <div class="f-rule"></div>
+            <div class="f-sub">Raise the standard.</div>
+            <div class="f-hint">Flip →</div>
+          </div>
+          <div class="face face-back">
+            <h5>From reporting to foresight</h5>
+            <p>Your data stops describing last quarter and starts predicting the next — who's about to churn, who's ready to buy, where margin leaks.</p>
+            <p>Decisions made on evidence, faster.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flip finale reveal" tabindex="0">
+        <div class="flip-inner">
+          <div class="face face-front">
+            <div class="f-icon"><img alt="" src="https://storage.googleapis.com/wttus/assets/57/a/1605006/images/crown-ChatGPT%20Image%20Aug%2011-%202026,%2005_30_59%20PM.png"></div>
+            <div class="f-num">05</div><div class="f-letter">D</div>
+            <div class="f-title">Dominate</div>
+            <div class="f-rule"></div>
+            <div class="f-sub">Lead. Influence. Win.</div>
+            <div class="f-hint">Flip →</div>
+          </div>
+          <div class="face face-back">
+            <h5>The lead they can't close</h5>
+            <p>Only 1 in 3 companies has pushed AI past a pilot. Those that have answer faster, spend less, and decide better — every month.</p>
+            <p>That gap compounds. Woven through your whole operation, AI stops being an edge you win once and becomes a lead competitors keep chasing.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="section process" id="process" data-section="process">
+  <div class="wrap">
+    <div class="eyebrow">How It Works</div>
+    <h2 class="h2 reveal">Three steps. No six-month rollout.</h2>
+    <p class="sub reveal">You'll know what we're building, why, and what it should return — before anything gets built.</p>
+    <div class="steps">
+      <div class="step reveal"><div class="step-num">01</div><h4>Assess</h4><p>We map how work actually moves through your business and pinpoint where AI creates the fastest measurable win — not the flashiest one.</p></div>
+      <div class="step reveal"><div class="step-num">02</div><h4>Implement</h4><p>We build the AI agent, automation, or reporting tool and connect it to what you already use — your calendar, your website, your customer records. Nothing goes live in front of a customer until you've seen it and given the OK.</p></div>
+      <div class="step reveal"><div class="step-num">03</div><h4>Scale</h4><p>We watch how it's actually working, fix anything that's not pulling its weight, and once something proves out, we bring that same approach to the next part of your business.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section services" id="services" data-section="services">
+  <div class="wrap">
+    <div class="eyebrow">What We Do</div>
+    <h2 class="h2 reveal">Where AI actually earns its keep</h2>
+    <p class="sub reveal">We put AI agents to work where they'll actually move your business forward.</p>
+    <div class="grid-2">
+      <div class="card reveal"><span class="chip">🧭</span><h4>AI Consulting</h4><p>We look at how your business actually runs — where time gets lost, where leads slip through the cracks — and give you a clear, practical plan for where AI will actually help, without disrupting what already works.</p></div>
+      <div class="card reveal"><span class="chip">💬</span><h4>AI Agents</h4><p>An agent trained on your own material that answers questions, books appointments, and handles FAQs any time of day — so no lead ever sits waiting on a callback that comes too late.</p></div>
+      <div class="card reveal"><span class="chip">⚙️</span><h4>Less Busywork, More Business</h4><p>Follow-ups, data entry, scheduling, invoicing — the repetitive tasks that eat your week, running on their own, connected through the tools your team already opens every morning.</p></div>
+      <div class="card reveal"><span class="tag">New for 2026</span><span class="chip" style="display:flex">🔎</span><h4>AI Search Visibility</h4><p>45% of consumers now use AI to find local businesses — up from 6% a year ago — yet barely 1% get recommended. We make sure ChatGPT, Claude, Gemini and Perplexity name you when your customers ask.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section faq" id="faq" data-section="faq">
+  <div class="wrap">
+    <div class="faq-layout">
+      <aside class="faq-aside reveal">
+        <div class="faq-photo">
+          <img src="https://paymegpt.com/objects/quick-uploads/83/427fb9ace8c5d029.webp" alt="Denise Whitfield, President and CEO of SAGED.AI">
+        </div>
+        <p style="color:var(--muted);font-size:14px;line-height:1.65;margin-bottom:12px">Denise Whitfield is the President &amp; CEO of SAGED.AI &mdash; a two-decade career spanning technology leadership at McDonnell Douglas, Fortune 500 experience at Citibank USA/Visa, Managing Director of a multimillion-dollar retail operation at Hartsfield-Jackson Atlanta International Airport, and civic innovation at MARTA.</p>
+        <div class="bio-more" id="bioMore">
+          <p style="color:var(--muted);font-size:14px;line-height:1.65;margin-bottom:22px">At Citibank USA/Visa, she was part of an elite MBA marketing team that directed successful, groundbreaking marketing campaigns. She went on to serve as Managing Director of WH Smith, then a leading airport retailer at Hartsfield-Jackson Atlanta International Airport, the world's busiest airport. She later brought that same discipline into public service at MARTA, North America's eighth-largest transit system and a federally funded (FTA) government agency, where she developed a first-of-its-kind pop-up food market serving transit-dependent riders. Denise holds an MBA from an HBCU and is regarded as one of the leading AI consulting authorities in the Atlanta area.</p>
+        </div>
+        <button class="btn btn-out" id="bioToggle" style="width:100%;margin-bottom:22px">Learn more about Denise Whitfield</button>
+        <div class="eyebrow">Ask Us Anything</div>
+        <h2>Straight answers, no sales pitch</h2>
+
+        <div class="ask-start" id="askStart">
+          <span class="ask-eyebrow" id="askEyebrowText" style="display:none">Answered live</span>
+          <p id="askIntroText" style="display:none">Ask us anything about applying AI in your business.</p>
+          <button class="btn btn-teal" id="askBegin" style="width:100%">Start a conversation with our AI concierge</button>
+        </div>
+
+        <div class="ask-inline off" id="askPanel">
+          <div class="ask-inline-head">
+            <span id="askPanelLabel">Ask us anything — answered live</span>
+            <button class="ask-x" id="askClose" aria-label="End chat" title="End chat">&times;</button>
+          </div>
+          <iframe id="askFrame" src="about:blank" title="Ask SAGED.AI"></iframe>
+        </div>
+
+        <a style="display:block;margin-top:14px;text-align:center;font-size:13.5px;color:var(--muted-2);text-decoration:underline;text-underline-offset:3px" href="#book" data-book="1">or book a free 30-minute audit instead</a>
+      </aside>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>What does SAGED.AI specialize in?</summary>
+          <div class="faq-body">We help small and mid-sized organizations put AI to work where it actually helps — answering customers around the clock, clearing repetitive busywork, and making sure people can find you when they ask AI tools instead of Google.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Everyone already uses AI. Why do I need help?</summary>
+          <div class="faq-body">Using a tool and getting results from it aren't the same thing. Most small and mid-sized organizations have tried ChatGPT or something similar here and there, but very few have actually changed how they run day to day — and that's where the real payoff is. The businesses pulling ahead aren't necessarily using fancier tools. They're using the tools they already have with an actual plan behind them.</div>
+        </details>
+        <details class="faq-item">
+          <summary>What is AI Search Visibility, and why does it matter now?</summary>
+          <div class="faq-body">More and more customers are asking tools like ChatGPT to find a business like yours instead of searching Google — 45% of them now do this, up from 6% a year ago. Almost none of those businesses actually get recommended by name. If AI doesn't know you exist, you lose the customer before they ever see your website. It's the same shift that happened with Google search results years ago, just moving faster.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Can AI actually do the work, not just answer questions?</summary>
+          <div class="faq-body">Yes. Most chatbots only answer what's typed to them. The AI agents we build can take the next step — texting a lead back, booking the appointment, updating your customer records, and moving things forward automatically, without anyone on your team having to remember to do it.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How is this different from a regular chatbot?</summary>
+          <div class="faq-body">Traditional chatbots follow rigid scripts and break the moment a customer says something unexpected. The AI agents we build understand what a customer actually means, get trained on your own business material, and can book appointments or capture a lead in the same conversation — getting sharper as they go.</div>
+        </details>
+        <details class="faq-item">
+          <summary>My team already uses ChatGPT. Isn't that enough?</summary>
+          <div class="faq-body">It's a start, but it's usually hit or miss. Most teams have one or two people who've figured out how to get good results, while everyone else is on their own — so results vary by person and by day. We turn that scattered, one-off use into something your whole team can rely on and repeat.</div>
+        </details>
+        <details class="faq-item">
+          <summary>Is AI hard to implement in a smaller business?</summary>
+          <div class="faq-body">Not with the right partner. Most of what we build works with the tools you already use — your website, calendar, customer records, social channels. We handle setup through launch for you, starting with whatever will make the biggest difference first so you see results early.</div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I get started?</summary>
+          <div class="faq-body">1. Book a free consultation to talk through your challenges and goals.
+2. We assess your operation and propose a tailored strategy.
+3. We implement, integrate, and measure the impact.
+4. We support and optimize as the business grows.</div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section pricing center" id="pricing" data-section="pricing">
+  <div class="wrap">
+    <div class="eyebrow">Pricing</div>
+    <h2 class="h2 reveal">Plans that meet you where you are</h2>
+    <div class="p-toggle">Billed Monthly</div>
+    <div class="p-grid">
+      <div class="p-card reveal">
+        <h4>Free AI Audit</h4>
+        <div class="p-price">$0 <small>/ 30 min</small></div>
+        <p class="p-desc">A no-pressure call to see where AI actually fits in your business — before you commit to anything.</p>
+        <ul class="p-list">
+          <li class="hdr">Included</li>
+          <li>30-Minute Strategy Call</li>
+          <li>Plain-Language Assessment</li>
+          <li>A Clear Recommended Next Step</li>
+        </ul>
+        <p class="p-note">No cost, no obligation, no pitch.</p>
+        <a class="btn btn-out" href="#book" data-book="1">Book Your Free Audit</a>
+      </div>
+      <div class="p-card reveal">
+        <h4>Essential AI</h4>
+        <div class="p-price">$499 <small>/ month</small></div>
+        <p class="p-desc">Engage visitors and automate conversations with an AI agent that answers questions and captures leads 24/7. Built for businesses making their first move into AI.</p>
+        <ul class="p-list">
+          <li class="hdr">Included</li>
+          <li>AI Readiness Audit</li>
+          <li>AI Chatbot Setup</li>
+          <li>AI-Powered Social Media Strategy</li>
+          <li>60-day Business Analysis</li>
+          <li>30-Minute Strategy Session</li>
+        </ul>
+        <p class="p-note">Start with a consultation — no commitment.</p>
+        <a class="btn btn-out" href="#book" data-book="1">Book a Free Audit</a>
+      </div>
+      <div class="p-card featured reveal">
+        <h4>Growth AI Accelerator</h4>
+        <div class="p-price">$799 <small>/ month</small></div>
+        <p class="p-desc">Your AI agent becomes a full CRM, email responder, and VIP program manager — streamlining operations while it drives revenue.</p>
+        <ul class="p-list">
+          <li class="hdr">Included</li>
+          <li>Everything in Essential</li>
+          <li>Agentic AI Agent</li>
+          <li>Business Intelligence &amp; Analytics</li>
+          <li>Customer Relationship Management</li>
+          <li>Workflow Automation</li>
+          <li>45-Minute Strategy Session</li>
+        </ul>
+        <p class="p-note">Most chosen by growing teams.</p>
+        <a class="btn btn-primary" href="#book" data-book="1">Book a Free Audit</a>
+      </div>
+      <div class="p-card reveal">
+        <h4>Enterprise AI</h4>
+        <div class="p-price" style="font-size:30px;line-height:1.35">Custom Pricing</div>
+        <p class="p-desc">Bespoke automation, advanced analytics, and executive-level strategy for organizations operating at scale.</p>
+        <ul class="p-list">
+          <li class="hdr">Included</li>
+          <li>Everything in Essential &amp; Growth</li>
+          <li>Omnichannel AI Agent</li>
+          <li>AI-Powered Document Automation</li>
+          <li>Enterprise Analytics &amp; Forecasting</li>
+          <li>Dedicated Executive AI Advisor</li>
+          <li>60-Minute Senior Strategy Call</li>
+        </ul>
+        <p class="p-note">Scoped to your organization.</p>
+        <a class="btn btn-out" href="https://paymegpt.com/p/8qNX2qhXY">Contact Us</a>
+      </div>
+    </div>
+    <p class="p-foot">Every plan starts with the free 30-minute audit above. Pricing is finalized in writing before any paid work begins.</p>
+  </div>
+</section>
+
+<section class="section band final-cta center">
+  <div class="wrap">
+    <div class="eyebrow">Ready When You Are</div>
+    <h2 class="h2 reveal">Let's find the AI that's worth your money</h2>
+    <p class="sub reveal" style="margin-left:auto;margin-right:auto">Thirty minutes, no cost, no pitch. You'll leave with a practical plan whether or not you work with us.</p>
+    <div class="hero-ctas" style="margin-top:30px;justify-content:center">
+      <a class="btn btn-teal" href="#book" data-book="1">Book Your Free AI Audit</a>
+      <a class="btn btn-light" href="https://paymegpt.com/p/8qNX2qhXY">Contact Us</a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer" data-section="footer">
+  <div class="wrap">
+    <div class="footer-logo">
+      <img alt="" src="https://paymegpt.com/objects/quick-uploads/83/ca7f64b5d5692704.png">
+      <span>SAGED.AI</span>
+    </div>
+    <p class="footer-tagline">Unlocking Growth Through AI</p>
+    <div class="footer-contact">
+      <span>Atlanta, GA 30126</span>
+      <span class="footer-contact-dot">•</span>
+      <a href="tel:+14049415569">(404) 941-5569</a>
+    </div>
+    <p class="footer-tag">AI consulting for small &amp; mid-sized organizations</p>
+
+    <div class="footer-legal-links" aria-label="Legal information">
+      <details class="privacy">
+        <summary>Privacy Policy</summary>
+        <div class="privacy-body">
+          <h5>Information we collect</h5>
+          <p>Depending on how you interact with SAGED.AI, we may collect information you choose to provide through forms, chat tools, email, or other contact methods. This can include your name, email address, phone number, company name, industry, project goals, scheduling details, and the content of messages or inquiries you submit. We may also collect limited technical information such as browser type, device information, general usage data, and basic analytics or session data where enabled.</p>
+
+          <h5>How we use it</h5>
+          <p>We use this information to respond to inquiries, provide requested information, schedule consultations, deliver services, operate and improve the website, maintain business records, support customer communications, and help our systems function properly. We may also use trusted service providers and third-party systems to host the site, process messages, manage forms, store records, deliver communications, and support AI-assisted features.</p>
+
+          <h5>Third-party systems and service providers</h5>
+          <p>Some information you submit may be processed by third-party tools or infrastructure providers that help operate our website, chatbot, CRM, scheduling tools, analytics, or related business systems. Those providers may store or process data on our behalf under their own technical and contractual terms. We take reasonable steps to choose vendors thoughtfully, but we cannot guarantee the privacy practices, uptime, or security controls of third-party services outside our direct control.</p>
+
+          <h5>Security limitations</h5>
+          <p>We use reasonable administrative, technical, and organizational measures designed to protect information in our care. However, no method of transmission or storage is completely secure, and we cannot promise absolute security. Information sent over the internet or through digital systems may carry inherent risks.</p>
+
+          <h5>Your choices</h5>
+          <p>You may choose not to provide certain information, though that may limit our ability to respond or provide services. You may also contact us to ask about accessing, correcting, or deleting information we hold, subject to applicable law and reasonable verification of your request. If you do not want to use the chatbot or forms, you can contact us through other available channels.</p>
+
+          <h5>How to contact us</h5>
+          <p>For privacy questions or requests, please <a href="https://paymegpt.com/p/8qNX2qhXY">contact us</a>. We will review reasonable requests and respond as appropriate.</p>
+
+          <h5>Our sale of personal information</h5>
+          <p>SAGED.AI and AI Strategies, LLC do not sell personal information in the ordinary sense of that term.</p>
+        </div>
+      </details>
+
+      <details class="privacy">
+        <summary>Terms of Use</summary>
+        <div class="privacy-body">
+          <h5>Agreement to these terms</h5>
+          <p>This website is operated by AI Strategies, LLC and presented under the SAGED.AI brand. By using this site, you agree to these Terms of Use and any additional terms that may apply to specific services, offers, or engagements.</p>
+
+          <h5>General informational content only</h5>
+          <p>The information on this website is provided for general informational and marketing purposes. It is not legal, tax, financial, regulatory, medical, or other professional advice, and it should not be relied on as a substitute for advice from qualified professionals who understand your situation.</p>
+
+          <h5>No guarantee of results</h5>
+          <p>We do not guarantee business results, revenue increases, cost savings, lead generation, operational improvements, or any other specific outcome from using this website, our content, our AI tools, or our services. Outcomes depend on many factors outside our control.</p>
+
+          <h5>Third-party services</h5>
+          <p>This website may rely on third-party services, software, platforms, hosting, integrations, or AI systems that may change, become unavailable, or fail without notice. We are not responsible for interruptions or limitations caused by third-party systems beyond our direct control.</p>
+
+          <h5>Intellectual property</h5>
+          <p>Unless otherwise stated, the content, branding, design, text, graphics, logos, and other materials on this site are owned by or licensed to AI Strategies, LLC and are protected by applicable intellectual property laws. You may not copy, modify, distribute, display, or use them except as permitted by law or with prior written permission.</p>
+
+          <h5>Acceptable use</h5>
+          <p>You agree not to misuse the website, attempt unauthorized access, interfere with its operation, submit harmful or unlawful content, scrape or harvest data in violation of applicable law, or use the site in a way that infringes the rights of others.</p>
+
+          <h5>Warranties and liability</h5>
+          <p>To the fullest extent permitted by law, the website and all content are provided "as is" and "as available," without warranties of any kind, whether express or implied, including implied warranties of merchantability, fitness for a particular purpose, title, and non-infringement. To the fullest extent permitted by law, AI Strategies, LLC and its affiliates will not be liable for indirect, incidental, special, consequential, or punitive damages arising from or related to your use of the site or reliance on its content.</p>
+
+          <h5>Separate client agreements</h5>
+          <p>Any client-specific consulting, implementation, support, or other paid services are governed by separate signed service agreements. If a signed agreement applies, its terms control the relationship for those services.</p>
+        </div>
+      </details>
+
+      <details class="privacy">
+        <summary>AI Disclaimer</summary>
+        <div class="privacy-body">
+          <h5>AI-generated content</h5>
+          <p>This website may use artificial intelligence and related automated technologies to generate or assist with responses, summaries, recommendations, and other content. Such outputs can be incomplete, inaccurate, outdated, misleading, or unexpected.</p>
+
+          <h5>Human review required</h5>
+          <p>AI outputs should be reviewed by a qualified human before being used for business, legal, financial, operational, medical, or other important decisions. AI is not a substitute for licensed professional advice or independent judgment.</p>
+
+          <h5>User responsibility</h5>
+          <p>Users and clients are responsible for evaluating AI outputs, deciding whether to rely on them, and using them in a lawful and appropriate manner. Any action taken based on AI-generated information is taken at your own discretion and risk.</p>
+
+          <h5>No guarantee of output or outcome</h5>
+          <p>SAGED.AI does not guarantee the accuracy, completeness, reliability, or suitability of AI outputs, and we do not guarantee any specific business outcome from the use of AI tools or services.</p>
+        </div>
+      </details>
+    </div>
+
+    <p class="footer-tag" style="margin-top:18px">© 2026 SAGED.AI / AI Strategies, LLC. All rights reserved.</p>
+    <p class="copyright">© 2026 SAGED.AI</p>
+  </div>
+</footer>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
