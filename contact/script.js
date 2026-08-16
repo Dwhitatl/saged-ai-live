@@ -13,19 +13,3 @@
     a.addEventListener('click', function(){ document.getElementById('nav').classList.remove('open'); });
   });
 })();
-
-(function(){
-  var BOOK = 'https://calendly.com/denisedwhitfield/30min';
-  function go(e){
-    e.preventDefault();
-    if(window.Calendly && window.Calendly.initPopupWidget){
-      window.Calendly.initPopupWidget({url: BOOK});
-    }else{
-      window.open(BOOK, '_blank', 'noopener');
-    }
-    return false;
-  }
-  document.querySelectorAll('a[data-book="1"]').forEach(function(a){
-    a.addEventListener('click', go);
-  });
-})();
