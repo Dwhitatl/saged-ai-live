@@ -89,7 +89,7 @@
 
   var COPY = {
     ask:  { eyebrow: 'Answered live', intro: 'Ask us anything about applying AI in your business.', panelLabel: 'Ask us anything — answered live' },
-    book: { eyebrow: 'Book live — no forms', intro: 'Tell our concierge what day and time work, and it\u2019s booked on the spot.', panelLabel: 'Booking your free 30-minute audit' }
+    book: { eyebrow: 'Book live — no forms', intro: 'Tell our AI agent what day and time work, and it\u2019s booked on the spot.', panelLabel: 'Booking your free 30-minute audit' }
   };
 
   function wipe(){
