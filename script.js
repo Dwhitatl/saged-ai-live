@@ -163,6 +163,12 @@
     });
   });
 
+  if(window.location.hash === '#book'){
+    var faqSectionOnLoad = document.getElementById('faq');
+    if(faqSectionOnLoad){ faqSectionOnLoad.scrollIntoView({behavior:'smooth', block:'start'}); }
+    setTimeout(function(){ open('book'); }, 600);
+  }
+
   window.addEventListener('blur', function(){
     setTimeout(function(){ if(document.activeElement === frame) kick(); }, 0);
   });
