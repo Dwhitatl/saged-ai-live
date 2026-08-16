@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://saged.ai/contact/</loc>
-    <lastmod>2026-08-16T17:12:42.540Z</lastmod>
+    <loc>https://saged.ai/</loc>
+    <lastmod>2026-08-16T17:17:19.855Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
-    <loc>https://saged.ai/</loc>
-    <lastmod>2026-08-16T17:11:23.085Z</lastmod>
+    <loc>https://saged.ai/contact/</loc>
+    <lastmod>2026-08-16T17:12:42.540Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
