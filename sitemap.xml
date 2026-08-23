@@ -2,7 +2,12 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://saged.ai/</loc>
-    <lastmod>2026-08-23T08:47:10.593Z</lastmod>
+    <lastmod>2026-08-23T09:31:54.001Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://saged.ai/</loc>
+    <lastmod>2026-08-23T09:28:54.118Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
