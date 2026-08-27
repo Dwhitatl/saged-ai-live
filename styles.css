@@ -39,7 +39,7 @@ h1,h2,h3,h4,h5,p{margin:0}
 .center .eyebrow::before{display:none}
 .reveal{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}
 .reveal.in{opacity:1;transform:translateY(0)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:15.5px;padding:15px 28px;border-radius:6px;transition:transform .18s,box-shadow .18s,background .18s,border-color .18s;cursor:pointer;border:none}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:600;font-size:15.5px;padding:15px 28px;border-radius:999px;transition:transform .18s,box-shadow .18s,background .18s,border-color .18s;cursor:pointer;border:none}
 .btn-primary{background:var(--btn-ink-bg);color:var(--btn-ink-fg);box-shadow:0 4px 14px var(--shadow)}
 .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 22px var(--shadow-2)}
 .btn-teal{background:var(--gold);color:#123A42;box-shadow:0 4px 16px rgba(194,168,104,.34)}
@@ -55,10 +55,31 @@ h1,h2,h3,h4,h5,p{margin:0}
 .nav-logo{display:flex;align-items:center;gap:11px}
 .nav-logo img{height:26px;width:auto;border-radius:0}
 .nav-logo span{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:23px;color:var(--ink);letter-spacing:.04em}
-.nav-links{display:flex;align-items:center;gap:24px;font-weight:500;font-size:14.5px}
-.nav-links a{color:var(--muted);transition:color .18s}
-.nav-links a:hover{color:var(--ink)}
-.nav-cta{padding:10px 20px;font-size:14px}
+.nav-links{display:flex;align-items:center;gap:12px;font-weight:500;font-size:14.5px;position:relative}
+.nav-links a:not(.nav-cta){
+  color:var(--muted);
+  transition:background .2s,color .2s,border-color .2s,transform .2s,box-shadow .2s;
+  position:relative;
+  z-index:2;
+  padding:9px 18px;
+  border-radius:999px;
+  border:1px solid rgba(31,90,99,.25);
+  background:var(--teal-soft);
+  line-height:1;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  white-space:nowrap;
+  flex-shrink:0;
+}
+.nav-links a:not(.nav-cta):nth-child(odd){
+  border-color:rgba(240,201,84,.4);
+}
+.nav-links a:not(.nav-cta):hover{
+  background:var(--gold);
+  color:#123A42;
+}
+.nav-cta{padding:10px 20px;font-size:14px;border-radius:999px;background:var(--teal);color:var(--btn-ink-fg);white-space:nowrap;flex-shrink:0}
 .theme-btn{background:transparent;border:1px solid var(--line-2);color:var(--ink);width:38px;height:38px;border-radius:6px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .2s,background .2s;flex:0 0 auto}
 .theme-btn:hover{border-color:var(--gold);background:var(--teal-soft)}
 .theme-btn svg{width:17px;height:17px;fill:currentColor}
@@ -89,7 +110,7 @@ h1,h2,h3,h4,h5,p{margin:0}
 .hero-ctas{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
 .hero-meta{margin-top:30px;color:var(--muted-2);font-size:13.5px}
 .hero-meta b{color:var(--ink);font-weight:600}
-.hero-video{position:relative;border-radius:14px;overflow:hidden;background:var(--surface-3);aspect-ratio:9/16;max-width:300px;margin:0 auto;box-shadow:0 24px 60px var(--shadow-2);border:1px solid var(--line)}
+.hero-video{position:relative;border-radius:14px;overflow:hidden;background:var(--surface-3);aspect-ratio:3/4;max-width:880px;margin:0 auto;box-shadow:0 24px 60px var(--shadow-2);border:1px solid var(--line)}
 .hero-video video{width:100%;height:100%;object-fit:cover;display:block}
 .video-fallback{position:absolute;inset:0;background-image:url('https://paymegpt.com/objects/quick-uploads/83/427fb9ace8c5d029.webp');background-size:cover;background-position:center top}
 .play-badge{width:64px;height:64px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 8px rgba(194,168,104,.22);animation:pulse 2.4s ease-in-out infinite;position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)}
@@ -225,6 +246,9 @@ h1,h2,h3,h4,h5,p{margin:0}
 .ask-inline iframe{display:block;width:100%;height:640px;border:none;background:var(--card)}
 .ask-x{background:transparent;border:none;color:var(--muted-2);font-size:22px;line-height:1;cursor:pointer;padding:0 2px;transition:color .18s}
 .ask-x:hover{color:var(--gold)}
+
+.ask-book-badge{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;margin-left:8px;font-size:13px;line-height:1;color:var(--gold);animation:bookBlink 1.2s ease-in-out infinite}
+@keyframes bookBlink{0%,100%{opacity:1}50%{opacity:.2}}
 
 .final-cta .h2{color:#FFFDF8}
 .final-cta .sub{color:#9DB5B3}
