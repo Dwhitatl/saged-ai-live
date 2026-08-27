@@ -3,20 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Cormorant+Garamond:wght@500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
-<!-- SEO Meta Tags -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
-
-
-
-
-
-
-
-<!-- End SEO Meta Tags -->
-<link rel="stylesheet" href="styles.css">
 
 <!-- SEO Meta Tags -->
 <title>SAGED.AI — Unlocking Growth Through AI | Atlanta AI Consulting</title>
@@ -313,7 +310,8 @@
     }
   });
 })();
-</script></head>
+</script>  <link rel="stylesheet" href="styles.css">
+</head>
 <body>
 <nav class="nav" id="nav" data-section="nav">
   <div class="nav-inner">
@@ -322,13 +320,14 @@
       <span>SAGED.AI</span>
     </a>
     <div class="nav-links">
+      <span class="nav-pill" id="navPill"></span>
       <a href="#method">The SAGED.AI Method</a>
       <a href="#why">Why SAGED.AI</a>
       <a href="#services">Services</a>
       <a href="#process">How It Works</a>
       <a href="#faq">FAQ</a>
       <a href="#pricing">Pricing</a>
-      <a class="btn btn-primary nav-cta" href="/contact">Contact Us</a>
+      <a class="btn btn-primary nav-cta" href="https://paymegpt.com/p/8qNX2qhXY">Contact Us</a>
     </div>
     <div class="nav-right">
       <button class="theme-btn" id="themeBtn" aria-label="Toggle light or dark mode" title="Toggle theme">
@@ -347,7 +346,7 @@
     <a href="#process">How It Works</a>
     <a href="#faq">FAQ</a>
     <a href="#pricing">Pricing</a>
-    <a href="/contact">Contact Us</a>
+    <a href="https://paymegpt.com/p/8qNX2qhXY">Contact Us</a>
   </div>
 </nav>
 
@@ -414,7 +413,7 @@
       <div class="flip reveal" tabindex="0">
         <div class="flip-inner">
           <div class="face face-front">
-            <div class="f-icon"><img alt="" src="data:image/png;base64,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"></div>
+            <div class="f-icon"><img alt="" src="https://paymegpt.com/objects/quick-uploads/83/cdef46fc2072bea8.png"></div>
             <div class="f-num">01</div><div class="f-letter">S</div>
             <div class="f-title">Streamline</div>
             <div class="f-rule"></div>
@@ -432,7 +431,7 @@
       <div class="flip reveal" tabindex="0">
         <div class="flip-inner">
           <div class="face face-front">
-            <div class="f-icon"><img alt="" src="data:image/png;base64,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"></div>
+            <div class="f-icon"><img alt="" src="https://paymegpt.com/objects/quick-uploads/83/0868978886bd8ee4.png"></div>
             <div class="f-num">02</div><div class="f-letter">A</div>
             <div class="f-title">Automate</div>
             <div class="f-rule"></div>
@@ -450,7 +449,7 @@
       <div class="flip reveal" tabindex="0">
         <div class="flip-inner">
           <div class="face face-front">
-            <div class="f-icon"><img alt="" src="data:image/png;base64,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"></div>
+            <div class="f-icon"><img alt="" src="https://paymegpt.com/objects/quick-uploads/83/c5e35b16faaefc20.png"></div>
             <div class="f-num">03</div><div class="f-letter">G</div>
             <div class="f-title">Grow</div>
             <div class="f-rule"></div>
@@ -468,7 +467,7 @@
       <div class="flip reveal" tabindex="0">
         <div class="flip-inner">
           <div class="face face-front">
-            <div class="f-icon"><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABUCAMAAAAmq5C0AAAAwFBMVEXv6N7i2arnzaDqsar89uK2sG7Jp2v07d3q4tDPs4W8nWPiqGp/AACYbDN/fwDe0LOofVW1o462ttqq/6qZzMz/fz/AoGH/v//U1H8AAADGpW3BnWT9/v28llfRt4vBmlp/f3+9m2Lo28X/AADbyKjk1Ljv5dH//wD/f3/36MvYwZi+vb2qqqrTs3n//3/r17EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACjL39NAAAAMHRSTlMVDucL5QnXnlfk7wkCJgKmIyQHAwUEvwQGAPz+Bv72/gL98wH39PQBAtL2BQP8AtZw5Wv9AAAEdUlEQVR42tWZaVejOgyGvQEhXWbm7jKyCQ7QAFn+/7+7MpC2pCShKT3T6uRLwDzIli29NgymWgk4rSGbSmQOnmZFIpSfgBSwnhX5BGU+O9LZ2ZHF3Mg15Hry3PidyGR2ZD03EsCaT0A238DL2CwmLvLJSJ0q2M+NdDMjcZkWsJnXyyzNP4KUzZussRhDNvIdXrJhndmDStIaVsNG28leSlgsTtrvoUxSe4JsgC9ATkKiXPyI2ODOBpwx8RApIVDR2PNjHW9AOjVgrkAYowfIOwgqxThOHEsOD4cBcwW5STV7QSKHn6Li0EwOj4SHuMKXmx3yxUvy7U4cJL17esQ5/BCCPQd+BbVJk+i4fOhlUSh+gXzPVEfJDrsY4X7fIy15qXqvOGAl7K9xH8+vHglM7JYRdkKoRaZl51azJmLIzxHPL0jqdaytYhveIjUhXYvkj9SBf/iZXl9c4+RGaHSFwbZFph0S2SMXuo7O+ngxbQQgiXlgd5seWcAWAyDirhqdkBMyEYfKeibHI5JJpkJNly5pzUtI5KzSJhP/BgHoJEkFBFjttBYXiZfzJcW70CYRGLAWKf86aL2zF0JzPQW3zCSxG+9lIoD+6FBeUdhXsvoesPbMUmdJkuda67q69sy1QkFrz5Jr3skkaeGIeAsSceNtRbYFHidZlpCXWaKJeL/3l1f+/ji8ReKTtzXZ6AuUNb2T2o1C/JMtAs95iRCpsnRFkdfW0qTRfiC7fmsfcWvrPC8KV6rFWKQYDQ0jgCc8I5ZLrXtSarx1SLKMRrW7RJZqs2xfUefCv6EsVYtzRe5JxMmy7Ng20b0Rhf6arGcer6ZHC5Nl24qe7eCicK87zlTfWTsEejezDthB6VLPj22eC+cr1SvM02hQ/HA6l+eEj2Od9Ej62db8WDqqjzgSqKdBeLCbN2T4qhhiTT33k8j7OMhp1KydTyucNNX3fEu2p5IlfNf9SC4Jafm93G9b46ubVg8tchFSGKxHWk0xqBngRxYkSix9idDKR9U5P8MK/FDaYFDtiCgA/Eg68Pl35+hFNyMpMYaa8joEjPqdOqq2sU7tlVx06SZJM+uJ2GV18pIFfwjtM2ZwG5LyWkEhrljQ1h6PlKs7JnzYobkF6SvPTocKA+wrpJcGQcAOOozZTUVXQlT7yvU3HqVBqzb4hmpcKtglUXG2ivNwd2D3rdLyAsYknSbCR1SW7rxbwHitQdptHTzLLHNUbg1gtBTqrDo4KwZZKEhhcnhRbtlRX+La343ep9xopIQnIrzoS5M8q2DSwFyEDySuJyMbYAehTlTwQKt7pniYroL/5EzF0ev0sHkj//+Dpjr8HGWy0YGMygBeJ4cNFMYM9z20WFUVwLQdhaR9jxzuz9p9z8lWivqu1KJpJu/O+ImOKd8g6VEeLaCZOomCU2mkMpPfvoekiI/tdM3bna7E7Yf242buLT7Txs1+tmFmPy75hEOdb3JAln39w8bvcnAr7MzI9hB8buQnHNW7/Ot/o0Aoi6//vYcaTv7Q9T9JlJ7SI3EK+AAAAABJRU5ErkJggg=="></div>
+            <div class="f-icon"><img alt="" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABUCAMAAAAmq5C0AAAAwFBMVEXv6N7i2arnzaDqsar89uK2sG7Jp2v07d3q4tDPs4W8nWPiqGp/AACYbDN/fwDe0LOofVW1o462ttqq/6qZzMz/fz/AoGH/v//U1H8AAADGpW3BnWT9/v28llfRt4vBmlp/f3+9m2Lo28X/AADbyKjk1Ljv5dH//wD/f3/36MvYwZi+vb2qqqrTs3n//3/r17EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACjL39NAAAAMHRSTlMVDucL5QnXnlfk7wkCJgKmIyQHAwUEvwQGAPz+Bv72/gL98wH39PQBAtL2BQP8AtZw5Wv9AAAEdUlEQVR42tWZaXejOgyGvQEhXWbm7jKyCQ7QAFn+/7+7MpC2pCShKT3T6uRLwDzIli29NgymWgk4rSGbSmQOnmZFIpSfgBSwnhX5BGU+O9LZ2ZHF3Mg15Hry3PidyGR2ZD03EsCaT0A238DL2CwmLvLJSJ0q2M+NdDMjcZkWsJnXyyzNP4KUzZussRhDNvIdXrJhndmDStIaVsNG28leSlgsTtrvoUxSe4JsgC9ATkKiXPyI2ODOBpwx8RApIVDR2PNjHW9AOjVgrkAYowfIOwgqxThOHEsOD4cBcwW5STV7QSKHn6Li0EwOj4SHuMKXmx3yxUvy7U4cJL17esQ5/BCCPQd+BbVJk+i4fOhlUSh+gXzPVEfJDrsY4X7fIy15qXqvOGAl7K9xH8+vHglM7JYRdkKoRaZl51azJmLIzxHPL0jqdaytYhveIjUhXYvkj9SBf/iZXl9c4+RGaHSFwbZFph0S2SMXuo7O+ngxbQQgiXlgd5seWcAWAyDirhqdkBMyEYfKeibHI5JJpkJNly5pzUtI5KzSJhP/BgHoJEkFBFjttBYXiZfzJcW70CYRGLAWKf86aL2zF0JzPQW3zCSxG+9lIoD+6FBeUdhXsvoesPbMUmdJkuda67q69sy1QkFrz5Jr3skkaeGIeAsSceNtRbYFHidZlpCXWaKJeL/3l1f+/ji8ReKTtzXZ6AuUNb2T2o1C/JMtAs95iRCpsnRFkdfW0qTRfiC7fmsfcWvrPC8KV6rFWKQYDQ0jgCc8I5ZLrXtSarx1SLKMRrW7RJZqs2xfUefCv6EsVYtzRe5JxMmy7Ng20b0Rhf6arGcer6ZHC5Nl24qe7eCicK87zlTfWTsEejezDthB6VLPj22eC+cr1SvM02hQ/HA6l+eEj2Od9Ej62db8WDqqjzgSqKdBeLCbN2T4qhhiTT33k8j7OMhp1KydTyucNNX3fEu2p5IlfNf9SC4Jafm93G9b46ubVg8tchFSGKxHWk0xqBngRxYkSix9idDKR9U5P8MK/FDaYFDtiCgA/Eg68Pl35+hFNyMpMYaa8joEjPqdOqq2sU7tlVx06SZJM+uJ2GV18pIFfwjtM2ZwG5LyWkEhrljQ1h6PlKs7JnzYobkF6SvPTocKA+wrpJcGQcAOOozZTUVXQlT7yvU3HqVBqzb4hmpcKtglUXG2ivNwd2D3rdLyAsYknSbCR1SW7rxbwHitQdptHTzLLHNUbg1gtBTqrDo4KwZZKEhhcnhRbtlRX+La343ep9xopIQnIrzoS5M8q2DSwFyEDySuJyMbYAehTlTwQKt7pniYroL/5EzF0ev0sHkj//+Dpjr8HGWy0YGMygBeJ4cNFMYM9z20WFUVwLQdhaR9jxzuz9p9z8lWivqu1KJpJu/O+ImOKd8g6VEeLaCZOomCU2mkMpPfvoekiI/tdM3bna7E7Yf252buLT7Txs1+tmFmPy75hEOdb3JAln39w8bvcnAr7MzI9hB8buQnHNW7/Ot/o0Aoi6//vYcaTv7Q9T9JlJ7SI3EK+AAAAABJRU5ErkJggg=="></div>
             <div class="f-num">04</div><div class="f-letter">E</div>
             <div class="f-title">Elevate</div>
             <div class="f-rule"></div>
@@ -482,6 +481,7 @@
           </div>
         </div>
       </div>
+
       <div class="flip finale reveal" tabindex="0">
         <div class="flip-inner">
           <div class="face face-front">
@@ -523,10 +523,10 @@
     <h2 class="h2 reveal">Where AI does the heavy lifting</h2>
     <p class="sub reveal">We put AI agents to work where they'll actually move your business forward.</p>
     <div class="grid-2">
-      <div class="card reveal"><span class="chip">🧭</span><h4>AI Consulting</h4><p>We look at how your business actually runs — where time gets lost, where leads slip through the cracks — and give you a clear, practical plan for where AI will actually help, without disrupting what already works.</p></div>
-      <div class="card reveal"><span class="chip">💬</span><h4>AI Agents</h4><p>An agent trained on your own material that answers questions, books appointments, and handles FAQs any time of day — so no lead ever sits waiting on a callback that comes too late.</p></div>
-      <div class="card reveal"><span class="chip">⚙️</span><h4>AI Automation</h4><p>Follow-ups, data entry, scheduling, invoicing — the repetitive tasks that eat your week, running on their own, connected through the tools your team already opens every morning.</p></div>
-      <div class="card reveal" style="position:relative"><span class="tag" style="position:absolute;top:16px;right:16px;">New for 2026</span><span class="chip" style="display:flex">🔎</span><h4>AI Search Visibility</h4><p>45% of consumers now use AI to find local businesses — up from 6% a year ago — yet barely 1% get recommended. We make sure ChatGPT, Claude, Gemini and Perplexity name you when your customers ask.</p></div>
+      <div class="card reveal"><h4>AI Consulting</h4><p>We look at how your business actually runs — where time gets lost, where leads slip through the cracks — and give you a clear, practical plan for where AI will actually help, without disrupting what already works.</p></div>
+      <div class="card reveal"><h4>AI Agents</h4><p>An agent trained on your own material that answers questions, books appointments, and handles FAQs any time of day — so no lead ever sits waiting on a callback that comes too late.</p></div>
+      <div class="card reveal"><h4>AI Automation</h4><p>Follow-ups, data entry, scheduling, invoicing — the repetitive tasks that eat your week, running on their own, connected through the tools your team already opens every morning.</p></div>
+      <div class="card reveal" style="position:relative"><span class="tag" style="position:absolute;top:16px;right:16px;">New for 2026</span><h4>AI Search Visibility</h4><p>45% of consumers now use AI to find local businesses — up from 6% a year ago — yet barely 1% get recommended. We make sure ChatGPT, Claude, Gemini and Perplexity name you when your customers ask.</p></div>
     </div>
   </div>
 </section>
@@ -535,7 +535,7 @@
   <div class="wrap">
     <div class="faq-layout">
       <aside class="faq-aside reveal">
-        <div class="eyebrow">Meet the Founder</div>
+        <div class="eyebrow" style="display:flex;justify-content:center;width:100%">Meet the Founder</div>
         <div class="faq-photo">
           <img src="https://paymegpt.com/objects/quick-uploads/83/427fb9ace8c5d029.webp" alt="Denise Whitfield, President and CEO of SAGED.AI">
         </div>
@@ -544,61 +544,67 @@
           <p style="color:var(--muted);font-size:14px;line-height:1.65;margin-bottom:22px">At Citibank USA/Visa, she was part of an elite MBA marketing team that directed successful, groundbreaking marketing campaigns. She went on to serve as Managing Director of WH Smith, then a leading airport retailer at the world's busiest airport. She later brought that same discipline into public service at the Metropolitan Atlanta Rapid Transit Authority (MARTA), North America's eighth-largest transit system and a federally funded (FTA) government agency, where she developed a first-of-its-kind pop-up food market serving transit-dependent riders. Denise holds an MBA from an HBCU and is regarded as one of the leading AI consulting authorities in the Atlanta area.</p>
         </div>
         <button class="btn btn-out" id="bioToggle" style="width:100%;margin-bottom:22px">Learn more about Denise Whitfield</button>
-        <div class="eyebrow">Ask Us Anything</div>
-        <h2 style="text-align:center">Straight answers, no sales pitch</h2>
-
-        <div class="ask-start" id="askStart">
-          <span class="ask-eyebrow" id="askEyebrowText" style="display:none">Answered live</span>
-          <p id="askIntroText" style="display:none">Ask us anything about applying AI in your business.</p>
-          <button class="btn btn-teal" id="askBegin" style="width:100%">Start a Conversation with Our AI Agent</button>
-        </div>
-
-        <div class="ask-inline off" id="askPanel">
-          <div class="ask-inline-head">
-            <span id="askPanelLabel">Ask us anything — answered live</span>
-            <button class="ask-x" id="askClose" aria-label="End chat" title="End chat">&times;</button>
-          </div>
-          <iframe id="askFrame" src="about:blank" title="Ask SAGED.AI"></iframe>
-        </div>
-
-        <a style="display:block;margin-top:14px;text-align:center;font-size:13.5px;color:var(--muted-2);text-decoration:underline;text-underline-offset:3px" href="#book" data-book="1">or book a free 30-minute audit instead</a>
       </aside>
       <div class="faq-list">
-        <details class="faq-item">
-          <summary>What does SAGED.AI specialize in?</summary>
-          <div class="faq-body">We help small and mid-sized organizations put AI to work where it actually helps — answering customers around the clock, clearing repetitive busywork, and making sure people can find you when they ask AI tools instead of Google.</div>
-        </details>
-        <details class="faq-item">
-          <summary>Everyone already uses AI. Why do I need help?</summary>
-          <div class="faq-body">Using a tool and getting results from it aren't the same thing. Most small and mid-sized organizations have tried ChatGPT or something similar here and there, but very few have actually changed how they run day to day — and that's where the real payoff is. The businesses pulling ahead aren't necessarily using fancier tools. They're using the tools they already have with an actual plan behind them.</div>
-        </details>
-        <details class="faq-item">
-          <summary>What is AI Search Visibility, and why does it matter now?</summary>
-          <div class="faq-body">More and more customers are asking tools like ChatGPT to find a business like yours instead of searching Google — 45% of them now do this, up from 6% a year ago. Almost none of those businesses actually get recommended by name. If AI doesn't know you exist, you lose the customer before they ever see your website. It's the same shift that happened with Google search results years ago, just moving faster.</div>
-        </details>
-        <details class="faq-item">
-          <summary>Can AI actually do the work, not just answer questions?</summary>
-          <div class="faq-body">Yes. Most AI tools only answer what's typed to them. The AI agents we build can take the next step — texting a lead back, booking the appointment, updating your customer records, and moving things forward automatically, without anyone on your team having to remember to do it.</div>
-        </details>
-        <details class="faq-item">
-          <summary>How is this different from a regular scripted bot?</summary>
-          <div class="faq-body">Traditional scripted bots break the moment a customer says something unexpected. The AI agents we build understand what a customer actually means, get trained on your own business material, and can book appointments or capture a lead in the same conversation — getting sharper as they go.</div>
-        </details>
-        <details class="faq-item">
-          <summary>My team already uses ChatGPT. Isn't that enough?</summary>
-          <div class="faq-body">It's a start, but it's usually hit or miss. Most teams have one or two people who've figured out how to get good results, while everyone else is on their own — so results vary by person and by day. We turn that scattered, one-off use into something your whole team can rely on and repeat.</div>
-        </details>
-        <details class="faq-item">
-          <summary>Is AI hard to implement in a smaller business?</summary>
-          <div class="faq-body">Not with the right partner. Most of what we build works with the tools you already use — your website, calendar, customer records, social channels. We handle setup through launch for you, starting with whatever will make the biggest difference first so you see results early.</div>
-        </details>
-        <details class="faq-item">
-          <summary>How do I get started?</summary>
-          <div class="faq-body">1. Book a free consultation to talk through your challenges and goals.
+        <div style="margin-bottom:40px">
+          <div class="eyebrow" style="display:flex;justify-content:center;width:100%">Ask Us Anything</div>
+          <h2 style="text-align:center;margin-bottom:32px">Straight answers, no sales pitch</h2>
+
+          <div class="ask-start" id="askStart" style="background:transparent;border:none;box-shadow:none;padding:0">
+            <span class="ask-eyebrow" id="askEyebrowText" style="display:none">Answered live</span>
+            <p id="askIntroText" style="display:none">Ask us anything about applying AI in your business.</p>
+            <button class="btn btn-teal" id="askBegin" style="display:block;margin:0 auto;border-radius:999px">Start a Conversation with Our AI Agent</button>
+          </div>
+
+          <div class="ask-inline off" id="askPanel">
+            <div class="ask-inline-head">
+              <span id="askPanelLabel">Ask us anything — answered live</span>
+              <button class="ask-x" id="askClose" aria-label="End chat" title="End chat">&times;</button>
+            </div>
+            <iframe id="askFrame" src="about:blank" title="Ask SAGED.AI"></iframe>
+          </div>
+        </div>
+
+        <button id="faqRevealBtn" class="btn btn-teal" style="display:block;margin:36px auto 0">See Frequently Asked Questions</button>
+        <div id="faqListContent" style="display:none;opacity:0;transition:opacity .45s ease">
+          <details class="faq-item">
+            <summary>What does SAGED.AI specialize in?</summary>
+            <div class="faq-body">We help small and mid-sized organizations put AI to work where it actually helps — answering customers around the clock, clearing repetitive busywork, and making sure people can find you when they ask AI tools instead of Google.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Everyone already uses AI. Why do I need help?</summary>
+            <div class="faq-body">Using a tool and getting results from it aren't the same thing. Most small and mid-sized organizations have tried ChatGPT or something similar here and there, but very few have actually changed how they run day to day — and that's where the real payoff is. The businesses pulling ahead aren't necessarily using fancier tools. They're using the tools they already have with an actual plan behind them.</div>
+          </details>
+          <details class="faq-item">
+            <summary>What is AI Search Visibility, and why does it matter now?</summary>
+            <div class="faq-body">More and more customers are asking tools like ChatGPT to find a business like yours instead of searching Google — 45% of them now do this, up from 6% a year ago. Almost none of those businesses actually get recommended by name. If AI doesn't know you exist, you lose the customer before they ever see your website. It's the same shift that happened with Google search results years ago, just moving faster.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Can AI actually do the work, not just answer questions?</summary>
+            <div class="faq-body">Yes. Most AI tools only answer what's typed to them. The AI agents we build can take the next step — texting a lead back, booking the appointment, updating your customer records, and moving things forward automatically, without anyone on your team having to remember to do it.</div>
+          </details>
+          <details class="faq-item">
+            <summary>How is this different from a regular scripted bot?</summary>
+            <div class="faq-body">Traditional scripted bots break the moment a customer says something unexpected. The AI agents we build understand what a customer actually means, get trained on your own business material, and can book appointments or capture a lead in the same conversation — getting sharper as they go.</div>
+          </details>
+          <details class="faq-item">
+            <summary>My team already uses ChatGPT. Isn't that enough?</summary>
+            <div class="faq-body">It's a start, but it's usually hit or miss. Most teams have one or two people who've figured out how to get good results, while everyone else is on their own — so results vary by person and by day. We turn that scattered, one-off use into something your whole team can rely on and repeat.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Is AI hard to implement in a smaller business?</summary>
+            <div class="faq-body">Not with the right partner. Most of what we build works with the tools you already use — your website, calendar, customer records, social channels. We handle setup through launch for you, starting with whatever will make the biggest difference first so you see results early.</div>
+          </details>
+          <details class="faq-item">
+            <summary>How do I get started?</summary>
+            <div class="faq-body">1. Book a free consultation to talk through your challenges and goals.
 2. We assess your operation and propose a tailored strategy.
 3. We implement, integrate, and measure the impact.
 4. We support and optimize as the business grows.</div>
-        </details>
+          </details>
+        </div>
+
+        <button class="btn btn-teal" id="askBookBtn" style="display:block;margin:0 auto;border-radius:999px;margin-top:36px">Book Your Free AI Audit<span class="ask-book-badge" aria-hidden="true">★</span></button>
       </div>
     </div>
   </div>
@@ -668,7 +674,7 @@
           <li>60-Minute Senior Strategy Call</li>
         </ul>
         <p class="p-note">Scoped to your organization.</p>
-        <a class="btn btn-out" href="/contact">Contact Us</a>
+        <a class="btn btn-out" href="https://paymegpt.com/p/8qNX2qhXY">Contact Us</a>
       </div>
     </div>
     <p class="p-foot">Every plan starts with the free 30-minute audit above. Pricing is finalized in writing before any paid work begins.</p>
@@ -682,7 +688,7 @@
     <p class="sub reveal" style="margin-left:auto;margin-right:auto">Thirty minutes, no cost, no pitch. You'll leave with a practical plan whether or not you work with us.</p>
     <div class="hero-ctas" style="margin-top:30px;justify-content:center">
       <a class="btn btn-teal" href="#book" data-book="1">Book Your Free AI Audit</a>
-      <a class="btn btn-light" href="/contact">Contact Us</a>
+      <a class="btn btn-light" href="https://paymegpt.com/p/8qNX2qhXY">Contact Us</a>
     </div>
   </div>
 </section>
@@ -721,7 +727,7 @@
           <p>You may choose not to provide certain information, though that may limit our ability to respond or provide services. You may also contact us to ask about accessing, correcting, or deleting information we hold, subject to applicable law and reasonable verification of your request. If you do not want to use the AI agent or forms, you can contact us through other available channels.</p>
 
           <h5>How to contact us</h5>
-          <p>For privacy questions or requests, please <a href="/contact">contact us</a>. We will review reasonable requests and respond as appropriate.</p>
+          <p>For privacy questions or requests, please <a href="https://paymegpt.com/p/8qNX2qhXY">contact us</a>. We will review reasonable requests and respond as appropriate.</p>
 
           <h5>Our sale of personal information</h5>
           <p>SAGED.AI and AI Strategies, LLC do not sell personal information in the ordinary sense of that term.</p>
@@ -779,6 +785,8 @@
     <p class="copyright">© 2026 SAGED.AI</p>
   </div>
 </footer>
+
+
 
   <script src="script.js"></script>
 </body>
