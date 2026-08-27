@@ -12,8 +12,42 @@
   document.querySelectorAll('.nav-mobile a').forEach(function(a){
     a.addEventListener('click', function(){ document.getElementById('nav').classList.remove('open'); });
   });
+  var navLinks = document.querySelector('.nav-links');
+  if(navLinks){
+    var navAnchors = navLinks.querySelectorAll('a:not(.nav-cta)');
+    navAnchors.forEach(function(link){
+      link.addEventListener('mousemove', function(e){
+        var rect = link.getBoundingClientRect();
+        var x = ((e.clientX - rect.left) - rect.width / 2) * 0.18;
+        var y = ((e.clientY - rect.top) - rect.height / 2) * 0.18;
+        x = Math.max(-8, Math.min(8, x));
+        y = Math.max(-8, Math.min(8, y));
+        if(window.gsap){
+          gsap.to(link, {x:x, y:y, duration:.3, ease:'power2.out', overwrite:true});
+        }else{
+          link.style.transform = 'translate(' + x + 'px,' + y + 'px)';
+        }
+      });
+      link.addEventListener('mouseleave', function(){
+        if(window.gsap){
+          gsap.to(link, {x:0, y:0, duration:.55, ease:'elastic.out(1,0.5)', overwrite:true});
+        }else{
+          link.style.transform = 'translate(0,0)';
+        }
+      });
+    });
+  }
   var track = document.getElementById('marqueeTrack');
   if(track){ track.innerHTML += track.innerHTML; }
+  var faqRevealBtn = document.getElementById('faqRevealBtn');
+  var faqListContent = document.getElementById('faqListContent');
+  if(faqRevealBtn && faqListContent){
+    faqRevealBtn.addEventListener('click', function(){
+      faqRevealBtn.style.display = 'none';
+      faqListContent.style.display = 'block';
+      requestAnimationFrame(function(){ faqListContent.style.opacity = '1'; });
+    });
+  }
   var bioBtn = document.getElementById('bioToggle');
   var bioMore = document.getElementById('bioMore');
   if(bioBtn && bioMore){
@@ -84,7 +118,7 @@
 
   var ASK_BASE  = 'https://paymegpt.com/agents/47699893/embed';
   var BOOK_BASE = 'https://paymegpt.com/agents/41566008/embed';
-  var IDLE = 30000;
+  var IDLE = 10000;
   var timer = null, live = false;
 
   var COPY = {
@@ -119,6 +153,7 @@
     if(eyebrowEl) eyebrowEl.textContent = c.eyebrow;
     if(introEl) introEl.textContent = c.intro;
     if(panelLabelEl) panelLabelEl.textContent = c.panelLabel;
+    if(beginBtn) beginBtn.textContent = mode === 'book' ? 'Click Here for Your Free AI Audit' : 'Start a Conversation with Our AI Agent';
   }
 
   function open(mode){
@@ -150,15 +185,47 @@
     timer = setTimeout(close, IDLE);
   }
 
-  if(beginBtn) beginBtn.addEventListener('click', function(){ open('ask'); });
+  window.addEventListener('message', function(event){
+    try{
+      if(!live) return;
+      var data = event && event.data;
+      var text = '';
+      if(typeof data === 'string'){
+        text = data;
+      }else if(data && typeof data === 'object'){
+        try{
+          text = JSON.stringify(data);
+        }catch(e){
+          text = String(data);
+        }
+      }else{
+        text = String(data);
+      }
+      text = (text || '').toLowerCase();
+      if(text.indexOf('booked') > -1 || text.indexOf('success') > -1 || text.indexOf('complete') > -1 || text.indexOf('submitted') > -1 || text.indexOf('confirmed') > -1){
+        close();
+      }
+    }catch(e){}
+  });
+
+  if(beginBtn) beginBtn.addEventListener('click', function(){
+    var mode = window.pendingAgentMode || 'ask';
+    window.pendingAgentMode = null;
+    open(mode);
+  });
+  var bookBtn = document.getElementById('askBookBtn');
+  if(bookBtn) bookBtn.addEventListener('click', function(){
+    window.pendingAgentMode = 'book';
+    applyCopy('book');
+    open('book');
+  });
   if(closeBtn) closeBtn.addEventListener('click', close);
 
   document.querySelectorAll('a[data-book="1"]').forEach(function(a){
     a.addEventListener('click', function(e){
       e.preventDefault();
-      var faqSection = document.getElementById('faq');
-      if(faqSection){ faqSection.scrollIntoView({behavior:'smooth', block:'start'}); }
-      setTimeout(function(){ open('book'); }, 450);
+      var askBookBtn = document.getElementById('askBookBtn');
+      if(askBookBtn){ askBookBtn.scrollIntoView({behavior:'smooth', block:'center'}); }
       return false;
     });
   });
@@ -172,9 +239,11 @@
   window.addEventListener('blur', function(){
     setTimeout(function(){ if(document.activeElement === frame) kick(); }, 0);
   });
-  ['mousemove','keydown','click','scroll','touchstart'].forEach(function(ev){
-    document.addEventListener(ev, kick, {passive:true});
-  });
+  if(panel){
+    ['mouseenter','mousemove'].forEach(function(ev){
+      panel.addEventListener(ev, kick, {passive:true});
+    });
+  }
   setInterval(function(){ if(live && document.activeElement === frame) kick(); }, 4000);
 
   window.addEventListener('pagehide', close);
