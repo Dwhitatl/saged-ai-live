@@ -249,3 +249,54 @@
   window.addEventListener('pagehide', close);
   window.addEventListener('pageshow', function(e){ if(e.persisted) close(); });
 })();
+
+(function(){
+  if(!window.gsap) return;
+
+  // A bold curtain-wipe sweeps across and off the hero the instant the page loads
+  gsap.set('.hero-wipe', {xPercent: 0});
+  gsap.to('.hero-wipe', {xPercent: 140, duration: 1, ease: 'power3.inOut', delay: 0.05});
+
+  // Entrance: headline words rise in calmly, solid color, no shimmer
+  gsap.set('.hw, .hl', {opacity:0, y:22, scale:0.97});
+  gsap.to('.hw, .hl', {
+    opacity:1, y:0, scale:1,
+    duration:1.1, ease:'power3.out', stagger:0.11, delay:0.2
+  });
+
+  // Bold gold highlighter block sweeps in behind "your business" —
+  // a single, confident, unmistakable reveal, then it stays
+  gsap.to('.hl', {
+    backgroundSize: '100% 100%',
+    duration: 0.9,
+    ease: 'power3.out',
+    delay: 1.5
+  });
+
+  // The video card rises in with the headline — one cohesive hero, not two
+  gsap.set('.hero-media', {opacity: 0, y: 24, scale: 0.96});
+  gsap.to('.hero-media', {opacity: 1, y: 0, scale: 1, duration: 1.1, ease: 'power3.out', delay: 0.3});
+
+  // A bright flash-bloom the instant it lands — announces the payoff, then settles
+  gsap.fromTo('.hl',
+    {boxShadow: '0 0 60px 18px rgba(240,201,84,.6)'},
+    {boxShadow: '0 0 0px 0px rgba(240,201,84,0)', duration: 0.9, ease: 'power2.out', delay: 2.35}
+  );
+
+  // The CTAs rise in last — the hero's reveal sequence ends by pointing at the button
+  gsap.set('.hero-ctas', {opacity: 0, y: 16});
+  gsap.to('.hero-ctas', {opacity: 1, y: 0, duration: 0.7, ease: 'power2.out', delay: 2.6});
+  gsap.fromTo('#heroBookBtn',
+    {boxShadow: '0 4px 16px rgba(194,168,104,.34), 0 0 34px 10px rgba(240,201,84,.55)'},
+    {boxShadow: '0 4px 16px rgba(194,168,104,.34), 0 0 0px 0px rgba(240,201,84,0)', duration: 1, ease: 'power2.out', delay: 2.9}
+  );
+
+  // A hand-drawn gold signature line draws itself in beneath the headline
+  var underlinePath = document.getElementById('underlinePath');
+  if(underlinePath){
+    var pathLen = underlinePath.getTotalLength();
+    underlinePath.style.strokeDasharray = pathLen;
+    underlinePath.style.strokeDashoffset = pathLen;
+    gsap.to(underlinePath, {strokeDashoffset: 0, duration: 1, ease: 'power2.inOut', delay: 1.7});
+  }
+})();
