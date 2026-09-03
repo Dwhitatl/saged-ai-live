@@ -352,18 +352,38 @@
 
 <header class="hero" id="top" data-section="hero">
   <div class="hero-dots"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow-2"></div>
+  <div class="hero-particle" style="width:6px;height:6px;top:22%;left:8%;animation-duration:7s;animation-delay:0s"></div>
+  <div class="hero-particle" style="width:4px;height:4px;top:65%;left:14%;animation-duration:9s;animation-delay:1.4s"></div>
+  <div class="hero-particle" style="width:8px;height:8px;top:40%;left:22%;animation-duration:8s;animation-delay:2.6s"></div>
+  <div class="hero-particle" style="width:5px;height:5px;top:78%;left:30%;animation-duration:10s;animation-delay:0.8s"></div>
+  <div class="hero-particle" style="width:7px;height:7px;top:15%;left:38%;animation-duration:7.5s;animation-delay:3.2s"></div>
+  <div class="hero-particle" style="width:4px;height:4px;top:55%;left:46%;animation-duration:9.5s;animation-delay:1.9s"></div>
+  <div class="hero-particle" style="width:6px;height:6px;top:30%;left:60%;animation-duration:8.5s;animation-delay:2.2s"></div>
+  <div class="hero-wipe"></div>
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <div class="badge"><span class="dot"></span> Atlanta-based · Serving growing businesses nationwide</div>
-      <h1>AI systems built around <em>your business</em>.</h1>
+      <h1><span class="hw">AI</span> <span class="hw">systems</span> <span class="hw">built</span> <span class="hw">around</span> <em class="hl">your business</em>.</h1>
+      <svg class="hw-underline" width="230" height="16" viewBox="0 0 230 16" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;margin:8px 0 4px">
+        <path id="underlinePath" d="M2 9 C 44 2, 86 14, 128 7 C 160 2, 196 12, 228 6" stroke="url(#underlineGrad)" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <defs>
+          <linearGradient id="underlineGrad" x1="0" y1="0" x2="230" y2="0" gradientUnits="userSpaceOnUse">
+            <stop offset="0" stop-color="#D4AF37"/>
+            <stop offset="0.5" stop-color="#F0C954"/>
+            <stop offset="1" stop-color="#B87333"/>
+          </linearGradient>
+        </defs>
+      </svg>
       <p class="lead">SAGED.AI turns AI from a headline into working infrastructure — AI agents that answer customers around the clock, automations that clear the busywork, and reporting that finally tells you something useful.</p>
       <div class="hero-ctas">
-        <a class="btn btn-teal" href="#book" data-book="1">Book a Free AI Audit</a>
+        <a class="btn btn-teal" href="#book" data-book="1" id="heroBookBtn">Book a Free AI Audit</a>
         <a class="btn btn-out" href="#method">The SAGED.AI Method</a>
       </div>
       <div class="hero-meta">30-minute call · <b>No cost, no pitch</b> · You leave with a plan either way</div>
     </div>
-    <div class="hero-media reveal">
+    <div class="hero-media">
       <div class="hero-video">
         <video id="denisePreview" muted playsinline poster="https://paymegpt.com/objects/quick-uploads/83/427fb9ace8c5d029.webp" style="display:none">
           <source src="https://paymegpt.com/objects/generated-videos/83/1787493921682-6971238eb95fdaf3.mp4" type="video/mp4">
@@ -785,6 +805,7 @@
     <p class="copyright">© 2026 SAGED.AI</p>
   </div>
 </footer>
+
 
 
 
