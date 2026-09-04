@@ -253,10 +253,6 @@
 (function(){
   if(!window.gsap) return;
 
-  // A bold curtain-wipe sweeps across and off the hero the instant the page loads
-  gsap.set('.hero-wipe', {xPercent: 0});
-  gsap.to('.hero-wipe', {xPercent: 140, duration: 1, ease: 'power3.inOut', delay: 0.05});
-
   // Entrance: headline words rise in calmly, solid color, no shimmer
   gsap.set('.hw, .hl', {opacity:0, y:22, scale:0.97});
   gsap.to('.hw, .hl', {
