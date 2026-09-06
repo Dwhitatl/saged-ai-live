@@ -63,6 +63,13 @@
       if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); c.classList.toggle('flipped'); }
     });
   });
+  document.querySelectorAll('.diamond-item').forEach(function(d){
+    function toggle(){ d.classList.toggle('flipped'); }
+    d.addEventListener('click', toggle);
+    d.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); }
+    });
+  });
   var io = new IntersectionObserver(function(entries){
     entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
   }, {threshold:.14});
