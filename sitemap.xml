@@ -2,12 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://saged.ai/</loc>
-    <lastmod>2026-09-04T00:43:21.972Z</lastmod>
+    <lastmod>2026-09-06T03:46:42.872Z</lastmod>
+    <changefreq>weekly</changefreq>
+  </url>
+  <url>
+    <loc>https://saged.ai/</loc>
+    <lastmod>2026-09-06T03:31:54.959Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://saged.ai/contact/</loc>
-    <lastmod>2026-09-04T00:10:47.309Z</lastmod>
+    <lastmod>2026-09-04T09:14:42.003Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
@@ -63,11 +68,6 @@
   <url>
     <loc>https://saged.ai/</loc>
     <lastmod>2026-09-02T23:50:43.730Z</lastmod>
-    <changefreq>weekly</changefreq>
-  </url>
-  <url>
-    <loc>https://saged.ai/</loc>
-    <lastmod>2026-09-02T23:48:13.492Z</lastmod>
     <changefreq>weekly</changefreq>
   </url>
   <url>
