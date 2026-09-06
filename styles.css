@@ -211,6 +211,38 @@ h1,h2,h3,h4,h5,p{margin:0}
 .step h4{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:23px;margin-bottom:9px;color:var(--ink)}
 .step p{color:var(--muted);font-size:15px}
 
+.diamond-chain{display:flex;flex-direction:column;align-items:center;margin:56px auto 0}
+.diamond-item{width:504px;height:504px;position:relative;cursor:pointer}
+.diamond-item:focus{outline:none}
+.diamond-item:focus-visible .diamond-shape{border-color:var(--gold)}
+.diamond-face{position:absolute;inset:0;perspective:1400px}
+.diamond-spin{position:relative;width:100%;height:100%;transform-style:preserve-3d;transition:transform 1s cubic-bezier(.4,.15,.2,1)}
+.diamond-item.flipped .diamond-spin{transform:rotateY(180deg)}
+.diamond-side{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;align-items:center;justify-content:center}
+.diamond-side.back{transform:rotateY(180deg)}
+.diamond-shape{width:356px;height:356px;transform:rotate(45deg);background:#F3E6C4;border:1px solid #E3D2A0;box-shadow:0 16px 40px var(--shadow);border-radius:8px;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:border-color .25s,box-shadow .25s}
+.diamond-item:hover .diamond-shape{border-color:var(--gold);box-shadow:0 20px 46px var(--shadow-2)}
+.diamond-content{transform:rotate(-45deg);width:330px;text-align:center;padding:0 6px}
+.diamond-num{font-family:"JetBrains Mono",monospace;font-weight:700;font-size:17px;letter-spacing:.14em;color:#8A6F32;margin-bottom:12px}
+.diamond-title{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:42px;color:#123A42;line-height:1.05;margin-bottom:12px}
+.diamond-tease{font-family:"Inter",sans-serif;font-weight:500;font-size:15px;color:#6B5636;margin-bottom:14px;line-height:1.35}
+.diamond-hint{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6B5A2E;margin-top:26px}
+.diamond-side.back .diamond-shape{background:linear-gradient(165deg,#123A42,#0B252B);border-color:rgba(194,168,104,.32)}
+.diamond-side.back .diamond-content{text-align:left;width:330px;padding:0 6px}
+.diamond-side.back .diamond-content p{font-size:17px;line-height:1.5;color:#C3D6D4;text-align:justify;text-align-last:left;hyphens:auto}
+.diamond-side.back .diamond-title{color:var(--gold);font-size:27px;margin-bottom:10px;text-align:center}
+@media(max-width:760px){
+  .diamond-item{width:380px;height:380px}
+  .diamond-shape{width:268px;height:268px}
+  .diamond-content{width:248px}
+  .diamond-side.back .diamond-content{width:248px}
+  .diamond-num{font-size:18px;margin-bottom:14px}
+  .diamond-side.front .diamond-title{font-size:36px;margin-bottom:14px}
+  .diamond-tease{font-size:14px;margin-bottom:10px}
+  .diamond-hint{font-size:10px;margin-top:18px}
+  .diamond-title{font-size:26px}
+}
+
 .why-points{list-style:none;margin:46px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:20px;text-align:left}
 .why-points li{background:rgba(255,253,248,.05);border:1px solid rgba(255,253,248,.12);border-radius:11px;padding:26px 22px;color:#CFDEDC;font-size:15px;line-height:1.55}
 .why-points li::before{content:"";display:block;width:26px;height:2px;background:var(--gold);margin-bottom:16px}
