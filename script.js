@@ -125,7 +125,7 @@
 
   var ASK_BASE  = 'https://paymegpt.com/agents/47699893/embed';
   var BOOK_BASE = 'https://paymegpt.com/agents/41566008/embed';
-  var IDLE = 10000;
+  var IDLE = 45000;
   var timer = null, live = false;
 
   var COPY = {
@@ -195,6 +195,7 @@
   window.addEventListener('message', function(event){
     try{
       if(!live) return;
+      kick();
       var data = event && event.data;
       var text = '';
       if(typeof data === 'string'){
