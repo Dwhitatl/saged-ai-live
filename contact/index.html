@@ -312,8 +312,7 @@
 <nav class="nav" id="nav" data-section="nav">
   <div class="nav-inner">
     <a class="nav-logo" href="https://paymegpt.com/p/U6nPtgkb">
-      <img alt="" src="https://paymegpt.com/objects/quick-uploads/83/ca7f64b5d5692704.png">
-      <span>SAGED.AI</span>
+      <img alt="" src="https://paymegpt.com/objects/quick-uploads/83/787755799f2306bb.png">
     </a>
     <div class="nav-links">
       <a href="https://paymegpt.com/p/U6nPtgkb#method">The SAGED Method</a>
@@ -346,15 +345,10 @@
 <header class="hero center" id="top" data-section="hero">
   <div class="hero-dots"></div>
   <div class="wrap">
-    <div class="eyebrow">Get In Touch</div>
-    <h1 class="h2">Let's talk about your business</h1>
-    <p class="sub">Book a free 30-minute AI audit — no cost, no pitch — or reach out directly below.</p>
-    <div class="hero-ctas">
-      <a class="btn btn-teal" href="/#book">Book a Free AI Audit</a>
-    </div>
+    <h1 class="h2">Contact Us</h1>
 
     <details class="contact-reveal" open>
-      <summary>Contact Us</summary>
+      <summary aria-hidden="true" style="display:none"></summary>
       <div class="contact-reveal-body">
         <div class="contact-row">
           <span class="chip">✉️</span>
@@ -368,15 +362,50 @@
           <span class="chip">📍</span>
           <a href="https://www.google.com/maps/search/?api=1&query=Atlanta%2C+GA+30126" target="_blank" rel="noopener">Atlanta, GA 30126</a>
         </div>
+        <div style="border-top:1px solid var(--line);margin:6px 0 0;padding-top:18px"></div>
+        <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px">Or send us a message</p>
+        <form id="contactForm" style="display:flex;flex-direction:column;gap:12px">
+          <input id="contactName" type="text" placeholder="Your name" style="width:100%;padding:13px 14px;border:1px solid var(--line-2);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit;outline:none">
+          <input id="contactEmail" type="email" placeholder="Your email" style="width:100%;padding:13px 14px;border:1px solid var(--line-2);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit;outline:none">
+          <input id="contactPhone" name="contactPhone" type="tel" autocomplete="tel" placeholder="Your phone (optional)" style="width:100%;padding:13px 14px;border:1px solid var(--line-2);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit;outline:none">
+          <div style="margin-top:2px;padding:12px 14px;border:1px solid var(--line);border-radius:8px;background:var(--surface);text-align:left">
+            <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 10px">SMS Updates (Optional)</p>
+            <label for="sms_consent" style="display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.55;color:var(--muted);text-align:left">
+              <input type="checkbox" id="sms_consent" name="sms_consent" value="yes" style="margin:3px 0 0;flex:0 0 auto">
+              <span>I agree to receive recurring marketing and promotional SMS messages from AI Strategies, LLC / SAGED.AI at the mobile phone number entered above. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for assistance. Consent is not a condition of purchase. <a href="https://paymegpt.com/p/aemXDkiP" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Privacy Policy</a> <a href="https://paymegpt.com/p/fde8Yr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Terms &amp; Conditions</a>.</span>
+            </label>
+          </div>
+          <textarea id="contactMessage" placeholder="How can we help?" rows="3" style="width:100%;padding:13px 14px;border:1px solid var(--line-2);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit;outline:none;resize:vertical"></textarea>
+          <button type="submit" class="btn btn-teal" id="contactSendBtn" style="width:100%">Send Message</button>
+          <p id="contactFormStatus" style="min-height:1.2em;font-size:14px;margin:0;color:var(--muted)"></p>
+        </form>
       </div>
     </details>
+
+    <div style="max-width:400px;margin:28px auto 0;padding-top:22px;border-top:1px solid var(--line);text-align:left">
+      <p style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);margin:0 0 12px">SMS Updates &amp; Offers (Optional)</p>
+      <form style="display:flex;flex-direction:column;gap:12px">
+        <label style="display:flex;flex-direction:column;gap:7px;font-size:13px;color:var(--muted)">
+          <span style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)">Mobile phone number</span>
+          <input type="tel" autocomplete="tel" placeholder="Your mobile phone number" style="width:100%;padding:13px 14px;border:1px solid var(--line-2);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit;outline:none">
+        </label>
+
+        <label for="sms_updates_consent" style="display:flex;align-items:flex-start;gap:10px;font-size:13px;line-height:1.55;color:var(--muted);text-align:left">
+          <input type="checkbox" id="sms_updates_consent" name="sms_updates_consent" value="yes" style="margin:3px 0 0;flex:0 0 auto">
+          <span>I agree to receive marketing and promotional SMS messages from AI Strategies, LLC / SAGED.AI at the mobile phone number entered above. Messages may include information about AI consulting and automation services, special offers, consultation invitations, service announcements, educational content, and related follow-up. Message frequency varies. Message and data rates may apply. Reply STOP to opt out or HELP for assistance. Consent is not a condition of purchase. <a href="https://paymegpt.com/p/aemXDkiP" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Privacy Policy</a> <a href="https://paymegpt.com/p/fde8Yr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline">Terms &amp; Conditions</a>.</span>
+        </label>
+
+        <button type="submit" class="btn btn-teal" style="width:100%">Yes, sign me up for SMS</button>
+        <p style="font-size:12px;line-height:1.5;margin:0;color:var(--muted)">You may opt out at any time by replying STOP. For assistance, reply HELP or email <a href="mailto:denise@saged.ai" style="color:inherit;text-decoration:underline">denise@saged.ai</a>.</p>
+      </form>
+    </div>
   </div>
 </header>
 
 <footer class="footer" data-section="footer">
   <div class="wrap">
     <div class="footer-logo">
-      <img alt="" src="https://paymegpt.com/objects/quick-uploads/83/ca7f64b5d5692704.png">
+      <img alt="" src="https://paymegpt.com/objects/quick-uploads/83/787755799f2306bb.png">
       <span>SAGED.AI</span>
     </div>
     <p class="footer-tagline">Unlocking Growth Through AI</p>
@@ -465,7 +494,82 @@
   </div>
 </footer>
 
+<script>
+(function(){
+  var btn = document.getElementById('themeBtn');
+  if(btn){
+    btn.addEventListener('click', function(){
+      var cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', cur);
+      try{ localStorage.setItem('saged-theme', cur); }catch(e){}
+    });
+  }
+  document.querySelectorAll('.nav-mobile a').forEach(function(a){
+    a.addEventListener('click', function(){ document.getElementById('nav').classList.remove('open'); });
+  });
 
+  var contactForm = document.getElementById('contactForm');
+  var contactSendBtn = document.getElementById('contactSendBtn');
+  var contactFormStatus = document.getElementById('contactFormStatus');
+
+  if(contactForm){
+    contactForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      var nameEl = document.getElementById('contactName');
+      var emailEl = document.getElementById('contactEmail');
+      var messageEl = document.getElementById('contactMessage');
+      var contactName = (nameEl.value || '').trim();
+      var contactEmail = (emailEl.value || '').trim();
+      var contactPhoneEl = document.getElementById('contactPhone');
+      var contactPhone = (contactPhoneEl.value || '').trim();
+      var smsConsentEl = document.getElementById('smsConsent');
+      var smsConsent = !!(smsConsentEl && smsConsentEl.checked);
+      var message = (messageEl.value || '').trim();
+      var phoneValid = /^\+?[0-9()\-\s.]{7,}$/.test(contactPhone);
+
+      contactFormStatus.style.color = 'var(--muted)';
+      if(!contactName || !contactEmail || !message){
+        contactFormStatus.textContent = 'Please fill in all fields.';
+        return;
+      }
+      if(smsConsent && (!contactPhone || !phoneValid)){
+        contactFormStatus.textContent = 'Please enter a valid phone number if you want to opt into SMS.';
+        return;
+      }
+
+      contactSendBtn.disabled = true;
+      contactSendBtn.style.opacity = '0.75';
+
+      fetch('https://paymegpt.com/api/webhooks/flow/5163/b58273a4fc0baf344c4d2d0eac2defc6e80351604a5ce7a6956e6a957384ac5b', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({
+          contactName: contactName,
+          contactEmail: contactEmail,
+          contactPhone: contactPhone,
+          data: { message: message }
+        })
+      })
+      .then(function(response){
+        if(!response.ok) throw new Error('Request failed');
+        nameEl.value = '';
+        emailEl.value = '';
+        messageEl.value = '';
+        contactFormStatus.style.color = 'var(--sage)';
+        contactFormStatus.textContent = "Thanks — we'll be in touch soon!";
+      })
+      .catch(function(){
+        contactFormStatus.style.color = '#d9534f';
+        contactFormStatus.textContent = 'Something went wrong — please email us directly instead.';
+      })
+      .finally(function(){
+        contactSendBtn.disabled = false;
+        contactSendBtn.style.opacity = '';
+      });
+    });
+  }
+})();
+</script>
   <script src="script.js"></script>
 </body>
 </html>
